@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FiSearch, FiShoppingCart, FiUser } from "react-icons/fi";
+import { Link } from "react-router-dom";
 import logo from "./images/logo/logo.png";
 
 function NavBar() {
@@ -10,18 +11,18 @@ function NavBar() {
       <div className="max-w-screen-xl flex items-center justify-center h-full mx-auto">
         <img src={logo} alt="Logo" className="h-25" />
         <div className="flex absolute left-[60px] hidden sm:block">
-          <a href="" className="uppercase font-bold text-lg px-3">
+          <Link to="/" className="uppercase font-bold text-lg px-3">
             Home
-          </a>
-          <a href="" className="uppercase font-bold text-lg px-3">
+          </Link>
+          <Link to="/About" className="uppercase font-bold text-lg px-3">
             About us
-          </a>
-          <a href="" className="uppercase font-bold text-lg px-3">
+          </Link>
+          <Link to="/Fragrances" className="uppercase font-bold text-lg px-3">
             Fragrances
-          </a>
-          <a href="" className="uppercase font-bold text-lg px-3">
+          </Link>
+          <Link to="/Contact" className="uppercase font-bold text-lg px-3">
             Contact us
-          </a>
+          </Link>
         </div>
 
         {/* Icons - Right side on desktop */}
@@ -62,18 +63,18 @@ function NavBar() {
       {/* Mobile nav items */}
       {isOpen && (
         <div className="sm:hidden bg-gray-100 space-y-2 py-3 text-center">
-          <a href="#" className="uppercase font-bold text-lg block">
+          <Link to="/" className="uppercase font-bold text-lg block">
             Home
-          </a>
-          <a href="#" className="uppercase font-bold text-lg block">
+          </Link>
+          <Link to="/About" className="uppercase font-bold text-lg block">
             About us
-          </a>
-          <a href="#" className="uppercase font-bold text-lg block">
+          </Link>
+          <Link to="/Fragrances" className="uppercase font-bold text-lg block">
             Fragrances
-          </a>
-          <a href="#" className="uppercase font-bold text-lg block">
+          </Link>
+          <Link to="/Contact" className="uppercase font-bold text-lg block">
             Contact us
-          </a>
+          </Link>
         </div>
       )}
     </nav>
