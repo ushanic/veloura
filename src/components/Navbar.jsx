@@ -7,10 +7,9 @@ function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="border-b-2 border-black bg-white h-12 m-0 relative z-10">
-      <div className="max-w-screen-xl flex items-center justify-center h-full mx-auto">
-        <img src={logo} alt="Logo" className="h-25" />
-        <div className="flex absolute left-[60px] hidden sm:block">
+    <nav className="border-b-2 border-black bg-white h-12 m-0 relative flex items-center ">
+      <div className="px-[60px] flex w-full justify-between items-center">
+        <div className=" hidden xl:block">
           <Link to="/" className="uppercase font-bold text-lg px-3">
             Home
           </Link>
@@ -26,7 +25,7 @@ function NavBar() {
         </div>
 
         {/* Icons - Right side on desktop */}
-        <div className="hidden sm:flex space-x-4 absolute right-[60px] text-black text-xl">
+        <div className="hidden xl:flex space-x-4 text-black text-xl">
           <button title="Search">
             <FiSearch />
           </button>
@@ -37,32 +36,35 @@ function NavBar() {
             <FiUser />
           </button>
         </div>
-
-        {/* Mobile hamburger menu button */}
-        <button
-          className="sm:hidden absolute right-4"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <svg
-            className="w-6 h-6 text-gray-800"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
       </div>
+      <div className="flex-1 flex justify-center items-center absolute w-full">
+        <img src={logo} alt="Logo" className="h-25" />
+      </div>
+
+      {/* Mobile hamburger menu button */}
+      <button
+        className="xl:hidden absolute right-4"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <svg
+          className="w-6 h-6 text-gray-800"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </button>
 
       {/* Mobile nav items */}
       {isOpen && (
-        <div className="sm:hidden bg-gray-100 space-y-2 py-3 text-center">
+        <div className="xl:hidden bg-gray-100 space-y-2 py-3 text-center">
           <Link to="/" className="uppercase font-bold text-lg block">
             Home
           </Link>
