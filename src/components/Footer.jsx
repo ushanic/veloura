@@ -11,7 +11,7 @@ import logo from "./images/logo/logo1.png";
 
 function Footer() {
   return (
-    <footer className="border-t-2 border-b-2 border-black w-full bg-white mb-[20px]">
+    <footer className="border-t-2 border-b-2 border-black w-full bg-white mb-[12px]">
       <div className="flex flex-col lg:flex-row w-full">
         {/* Left Section */}
         <div className=" px-[60px] border-b-2 lg:border-b-0 lg:border-r-2 w-full space-y-5 flex-col justify-center items-center flex py-6">
