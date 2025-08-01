@@ -4,10 +4,15 @@ import { GiPerfumeBottle } from "react-icons/gi";
 import { RiUserStarLine } from "react-icons/ri";
 
 import backgroundimg from "../images/backgroundimg.png";
+import brand1 from "../images/brands/brand1.png";
+import brand2 from "../images/brands/brand2.png";
+import brand3 from "../images/brands/brand3.png";
+import brand4 from "../images/brands/brand4.png";
+
 
 function Home() {
   return (
-    <div className="relative w-full aspect-[3/2] overflow-hidden flex px-[60px]">
+    <div className="relative w-full aspect-[3/2] overflow-hidden flex px-[60px] flex-col">
       <img
         src={backgroundimg}
         alt=""
@@ -75,6 +80,12 @@ function Home() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="w-full h-10 bg-black m-0 p-0 absolute bottom-60 left-0 flex flex-row gap-30 justify-center">
+        <img src={brand1} alt="brand1" className="w-auto h-auto" />
+  <img src={brand2} alt="brand2" className="w-auto h-auto" />
+  <img src={brand3} alt="brand3" className="w-auto h-auto" />
+  <img src={brand4} alt="brand4" className="w-auto h-auto" />
       </div>
     </div>
   );
