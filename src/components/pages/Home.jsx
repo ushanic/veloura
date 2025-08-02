@@ -87,6 +87,17 @@ function Home() {
   <img src={brand3} alt="brand3" className="w-auto h-auto" />
   <img src={brand4} alt="brand4" className="w-auto h-auto" />
       </div>
+      <div>
+        <div className=" absolute flex flex-row items-start justify-between w-full">
+  <span className="text-9xl font-bold">2015</span>
+  <div className="right-60 top-60 mt-4 h-1 w-200 bg-red-500" />
+  <div className="flex flex-col items-start">
+    <span className="text-5xl font-bold uppercase">A Journey Through Scent</span>
+    
+  </div>
+</div>
+
+      </div>
     </div>
   );
 }
