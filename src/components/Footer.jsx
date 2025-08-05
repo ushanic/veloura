@@ -11,6 +11,7 @@ import logo from "./images/logo/logo1.png";
 
 function Footer() {
   return (
+    <div className="mt-20 sm:mt-24 md:mt-32">
     <footer className="border-t-2 border-b-2 border-black w-full bg-white mb-[12px]">
       <div className="flex flex-col lg:flex-row w-full">
         {/* Left Section */}
@@ -110,7 +111,7 @@ function Footer() {
         <p>Terms & Conditions</p>
         <p>Privacy Policy</p>
       </div>
-    </footer>
+    </footer></div>
   );
 }
 
