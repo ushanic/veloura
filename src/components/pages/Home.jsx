@@ -95,12 +95,19 @@ function Home() {
       </div>
 
       {/* Brands Section */}
-      <div className="w-full h-14 bg-black m-0 p-4 flex flex-row gap-12 justify-center items-center">
-        <img src={brand1} alt="brand1" className="h-auto max-h-10" />
-        <img src={brand2} alt="brand2" className="h-auto max-h-10" />
-        <img src={brand3} alt="brand3" className="h-auto max-h-10" />
-        <img src={brand4} alt="brand4" className="h-auto max-h-10" />
-      </div>
+      
+
+      <div className="grid grid-cols-4 gap-4 px-20 h-15 bg-black">
+  <div className=" p-4 text-center">
+    <img src={brand1} alt="brand1" className=" " />
+  </div>
+  <div className=" p-4 text-center">
+    <img src={brand2} alt="brand2" className="" />
+  </div>
+  <div className="p-4 text-center"><img src={brand3} alt="brand3" className="" /></div>
+  <div className="p-4 text-center"><img src={brand4} alt="brand4" className="" /></div>
+</div>
+
 
       {/* Timeline Section */}
       <div className="w-full flex flex-col lg:flex-row justify-between items-start mt-10 px-4 sm:px-8 md:px-16 lg:px-[60px] gap-10">
