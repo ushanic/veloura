@@ -104,338 +104,333 @@ function Home() {
 
       {/* Timeline Section */}
       <div className="w-full flex flex-col lg:flex-row justify-between items-start mt-10 px-4 sm:px-8 md:px-16 lg:px-[60px] gap-10">
-  {/* Left Column: Timeline */}
-  <div className="flex flex-col gap-10 max-w-full lg:max-w-[450px]">
-    <span className="text-9xl font-bold">2015</span>
+        {/* Left Column: Timeline */}
+        <div className="flex flex-col gap-10 max-w-full lg:max-w-[450px]">
+          <span className="text-9xl font-bold">2015</span>
 
-    {/* Timeline Entry 1 */}
-    <div className="flex items-start justify-between">
-      <div className="flex flex-col max-w-[420px]">
-        <span className="text-sm sm:text-base md:text-lg lg:text-xl font-bold">
-          Introduced premium perfume collections for all
-        </span>
-        <div className="mt-2 space-y-1">
-          <div className="h-0.5 w-full sm:w-[350px] lg:w-[470px] bg-gray-300" />
+          {/* Timeline Entry 1 */}
+          <div className="flex items-start justify-between">
+            <div className="flex flex-col max-w-[420px]">
+              <span className="text-sm sm:text-base md:text-lg lg:text-xl font-bold">
+                Introduced premium perfume collections for all
+              </span>
+              <div className="mt-2 space-y-1">
+                <div className="h-0.5 w-full sm:w-[350px] lg:w-[470px] bg-gray-300" />
+              </div>
+            </div>
+            <span className="text-sm sm:text-base md:text-lg lg:text-xl font-bold ml-4 self-start">
+              2017
+            </span>
+          </div>
 
+          {/* Timeline Entry 2 */}
+          <div className="flex items-start justify-between">
+            <div className="flex flex-col max-w-[420px]">
+              <span className="text-sm sm:text-base md:text-lg lg:text-xl font-bold">
+                Enhanced curation with timeless signature scents
+              </span>
+              <div className="mt-2 space-y-1">
+                <div className="h-0.5 w-full sm:w-[350px] lg:w-[470px] bg-gray-300" />
+              </div>
+            </div>
+            <span className="text-sm sm:text-base md:text-lg lg:text-xl font-bold ml-4 self-start">
+              2020
+            </span>
+          </div>
+
+          {/* Timeline Entry 3 */}
+          <div className="flex items-start justify-between">
+            <div className="flex flex-col max-w-[420px]">
+              <span className="text-sm sm:text-base md:text-lg lg:text-xl font-bold">
+                Redesigned experience for modern fragrance lovers
+              </span>
+              <div className="mt-2 space-y-1">
+                <div className="h-0.5 w-full sm:w-[350px] lg:w-[470px] bg-gray-300" />
+              </div>
+            </div>
+            <span className="text-sm sm:text-base md:text-lg lg:text-xl font-bold ml-4 self-start">
+              2024
+            </span>
+          </div>
+        </div>
+
+        {/* Right Column: Description */}
+        <div className="flex flex-col mt-0 lg:mt-15 max-w-full lg:max-w-[675px] w-full">
+          <div className="flex justify-between items-center w-full">
+            <span className="text-5xl font-bold uppercase">
+              A Journey Through Scent
+            </span>
+          </div>
+
+          <div className="mt-2 h-0.5 w-full bg-gray-300" />
+
+          <div className="mt-4 text-justify text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-bold">
+            VELOURA is a curated destination for timeless fragrances. We bring
+            together an exclusive selection of perfumes known for their
+            elegance, depth, and character. Each scent is carefully chosen to
+            inspire confidence and individuality, helping you find the perfect
+            fragrance to express your personal story with grace and distinction.
+          </div>
+
+          <div className="mt-10 flex justify-start">
+            <button
+              type="button"
+              className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base md:px-5 md:py-2.5 md:text-lg font-medium uppercase text-white dark:bg-black"
+            >
+              <span>explore more</span>
+              <FaArrowRight className="text-red-600 text-base sm:text-lg md:text-xl" />
+            </button>
+          </div>
         </div>
       </div>
-      <span className="text-sm sm:text-base md:text-lg lg:text-xl font-bold ml-4 self-start">
-        2017
-      </span>
-    </div>
-
-    {/* Timeline Entry 2 */}
-    <div className="flex items-start justify-between">
-      <div className="flex flex-col max-w-[420px]">
-        <span className="text-sm sm:text-base md:text-lg lg:text-xl font-bold">
-          Enhanced curation with timeless signature scents
-        </span>
-        <div className="mt-2 space-y-1">
-          <div className="h-0.5 w-full sm:w-[350px] lg:w-[470px] bg-gray-300" />
-
-        </div>
-      </div>
-      <span className="text-sm sm:text-base md:text-lg lg:text-xl font-bold ml-4 self-start">
-        2020
-      </span>
-    </div>
-
-    {/* Timeline Entry 3 */}
-    <div className="flex items-start justify-between">
-      <div className="flex flex-col max-w-[420px]">
-        <span className="text-sm sm:text-base md:text-lg lg:text-xl font-bold">
-          Redesigned experience for modern fragrance lovers
-        </span>
-        <div className="mt-2 space-y-1">
-          <div className="h-0.5 w-full sm:w-[350px] lg:w-[470px] bg-gray-300" />
-
-        </div>
-      </div>
-      <span className="text-sm sm:text-base md:text-lg lg:text-xl font-bold ml-4 self-start">
-        2024
-      </span>
-    </div>
-  </div>
-
-  {/* Right Column: Description */}
-  <div className="flex flex-col mt-0 lg:mt-15 max-w-full lg:max-w-[675px] w-full">
-    <div className="flex justify-between items-center w-full">
-      <span className="text-5xl font-bold uppercase">
-        A Journey Through Scent
-      </span>
-    </div>
-
-    <div className="mt-2 h-0.5 w-full bg-gray-300" />
-
-    <div className="mt-4 text-justify text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-bold">
-      VELOURA is a curated destination for timeless fragrances. We bring
-      together an exclusive selection of perfumes known for their elegance,
-      depth, and character. Each scent is carefully chosen to inspire
-      confidence and individuality, helping you find the perfect fragrance
-      to express your personal story with grace and distinction.
-    </div>
-
-    <div className="mt-10 flex justify-start">
-      <button
-        type="button"
-        className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base md:px-5 md:py-2.5 md:text-lg font-medium uppercase text-white dark:bg-black"
-      >
-        <span>explore more</span>
-        <FaArrowRight className="text-red-600 text-base sm:text-lg md:text-xl" />
-      </button>
-    </div>
-  </div>
-</div>
-
 
       {/* Most Adored Scents Section */}
       <div className="w-full flex flex-col lg:flex-row justify-between items-start px-4 sm:px-8 md:px-12 lg:px-[60px] gap-10">
-  {/* Left Column: Heading */}
-  <div className="flex flex-col max-w-full lg:max-w-[850px] mt-10 lg:mt-30">
-    <span className="text-5xl font-bold uppercase w-full">
-      Our Most Adored Scents
-    </span>
-    <div className="mt-2 h-0.5 w-full bg-gray-300" />
-  </div>
+        {/* Left Column: Heading */}
+        <div className="flex flex-col max-w-full lg:max-w-[850px] mt-10 lg:mt-30">
+          <span className="text-5xl font-bold uppercase w-full">
+            Our Most Adored Scents
+          </span>
+          <div className="mt-2 h-0.5 w-full bg-gray-300" />
+        </div>
 
-  {/* Right Column: Description */}
-  <div className="flex flex-col max-w-full lg:max-w-[575px] w-full mt-10 lg:mt-25">
-    <div className="flex justify-between items-center w-full"></div>
+        {/* Right Column: Description */}
+        <div className="flex flex-col max-w-full lg:max-w-[575px] w-full mt-10 lg:mt-25">
+          <div className="flex justify-between items-center w-full"></div>
 
-    <div className="mt-2 h-0.5 w-full bg-gray-300" />
+          <div className="mt-2 h-0.5 w-full bg-gray-300" />
 
-    <div className="mt-4 text-justify text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-bold">
-      Discover the top-selling perfumes in our exclusive collection —
-      explore the most popular scents of the year from classic fragrances.
-    </div>
+          <div className="mt-4 text-justify text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-bold">
+            Discover the top-selling perfumes in our exclusive collection —
+            explore the most popular scents of the year from classic fragrances.
+          </div>
 
-    <div className="mt-10 flex justify-start">
-      <button
-        type="button"
-        className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base md:px-5 md:py-2.5 md:text-lg font-medium uppercase text-white dark:bg-black"
-      >
-        <span>view Fragrance</span>
-        <FaArrowRight className="text-red-600 text-base sm:text-lg md:text-xl" />
-      </button>
-    </div>
-  </div>
-</div>
-
+          <div className="mt-10 flex justify-start">
+            <button
+              type="button"
+              className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base md:px-5 md:py-2.5 md:text-lg font-medium uppercase text-white dark:bg-black"
+            >
+              <span>view Fragrance</span>
+              <FaArrowRight className="text-red-600 text-base sm:text-lg md:text-xl" />
+            </button>
+          </div>
+        </div>
+      </div>
 
       {/* Perfume Cards Section */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 sm:px-8 md:px-12 lg:px-[60px] mt-20">
-  {/* CARD 1 */}
-  <div className="border-2 border-black divide-y-2 divide-black grid grid-rows-[auto_100px]">
-    <div className="p-4 flex justify-center">
-      <img
-        src={DiorSauvage}
-        alt="Sauvage Eau de Parfum"
-        className="w-80 h-100 object-cover"
-      />
-    </div>
-    <div className="p-2 flex flex-col h-[100px]">
-      <span className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-bold uppercase">
-        Sauvage Parfum
-      </span>
-      <div className="flex justify-between items-center space-x-1">
-        {/* Stars */}
-        <div className="flex space-x-1">
-          {Array.from({ length: 5 }).map((_, i) => (
-            <svg
-              key={i}
-              className="w-4 h-4 text-black"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 22 20"
-            >
-              <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-            </svg>
-          ))}
+        {/* CARD 1 */}
+        <div className="border-2 border-black divide-y-2 divide-black grid grid-rows-[auto_100px]">
+          <div className="p-4 flex justify-center">
+            <img
+              src={DiorSauvage}
+              alt="Sauvage Eau de Parfum"
+              className="w-80 h-100 object-cover"
+            />
+          </div>
+          <div className="p-2 flex flex-col h-[100px]">
+            <span className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-bold uppercase">
+              Sauvage Parfum
+            </span>
+            <div className="flex justify-between items-center space-x-1">
+              {/* Stars */}
+              <div className="flex space-x-1">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <svg
+                    key={i}
+                    className="w-4 h-4 text-black"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 22 20"
+                  >
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                  </svg>
+                ))}
+              </div>
+              <span className="text-4xl font-bold uppercase">$160</span>
+            </div>
+          </div>
         </div>
-        <span className="text-4xl font-bold uppercase">$160</span>
-      </div>
-    </div>
-  </div>
 
-  {/* CARD 2 */}
-  <div className="border-2 border-black divide-y-2 divide-black grid grid-rows-[auto_100px]">
-    <div className="p-4 flex justify-center">
-      <img
-        src={MyEuphoria}
-        alt="My Euphoria"
-        className="w-80 h-100 object-cover"
-      />
-    </div>
-    <div className="p-2 flex flex-col h-[100px]">
-      <span className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-bold uppercase">
-        My Euphoria Eau De Parfum
-      </span>
-      <div className="flex justify-between items-center space-x-1">
-        <div className="flex space-x-1">
-          {Array.from({ length: 5 }).map((_, i) => (
-            <svg
-              key={i}
-              className="w-4 h-4 text-black"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 22 20"
-            >
-              <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-            </svg>
-          ))}
+        {/* CARD 2 */}
+        <div className="border-2 border-black divide-y-2 divide-black grid grid-rows-[auto_100px]">
+          <div className="p-4 flex justify-center">
+            <img
+              src={MyEuphoria}
+              alt="My Euphoria"
+              className="w-80 h-100 object-cover"
+            />
+          </div>
+          <div className="p-2 flex flex-col h-[100px]">
+            <span className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-bold uppercase">
+              My Euphoria Eau De Parfum
+            </span>
+            <div className="flex justify-between items-center space-x-1">
+              <div className="flex space-x-1">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <svg
+                    key={i}
+                    className="w-4 h-4 text-black"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 22 20"
+                  >
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                  </svg>
+                ))}
+              </div>
+              <span className="text-4xl font-bold uppercase">$100</span>
+            </div>
+          </div>
         </div>
-        <span className="text-4xl font-bold uppercase">$100</span>
-      </div>
-    </div>
-  </div>
 
-  {/* CARD 3 */}
-  <div className="border-2 border-black divide-y-2 divide-black grid grid-rows-[auto_100px]">
-    <div className="p-4 flex justify-center">
-      <img
-        src={BoisTalisman}
-        alt="Bois Talisman"
-        className="w-80 h-100 object-cover"
-      />
-    </div>
-    <div className="p-2 flex flex-col h-[100px]">
-      <span className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-bold uppercase">
-        Bois Talisman
-      </span>
-      <div className="flex justify-between items-center space-x-1">
-        <div className="flex space-x-1">
-          {Array.from({ length: 5 }).map((_, i) => (
-            <svg
-              key={i}
-              className="w-4 h-4 text-black"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 22 20"
-            >
-              <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-            </svg>
-          ))}
+        {/* CARD 3 */}
+        <div className="border-2 border-black divide-y-2 divide-black grid grid-rows-[auto_100px]">
+          <div className="p-4 flex justify-center">
+            <img
+              src={BoisTalisman}
+              alt="Bois Talisman"
+              className="w-80 h-100 object-cover"
+            />
+          </div>
+          <div className="p-2 flex flex-col h-[100px]">
+            <span className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-bold uppercase">
+              Bois Talisman
+            </span>
+            <div className="flex justify-between items-center space-x-1">
+              <div className="flex space-x-1">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <svg
+                    key={i}
+                    className="w-4 h-4 text-black"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 22 20"
+                  >
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                  </svg>
+                ))}
+              </div>
+              <span className="text-4xl font-bold uppercase">$250</span>
+            </div>
+          </div>
         </div>
-        <span className="text-4xl font-bold uppercase">$250</span>
+      </div>
+
+      {/* Promotional Section */}
+     <div className="mt-25 px-4 sm:px-6 md:px-10 lg:px-[60px]">
+  <div className="grid grid-cols-1 lg:grid-cols-2 border-2 border-black divide-y-2 lg:divide-y-0 lg:divide-x-2 divide-black">
+    
+    {/* Left - Image */}
+    <div className="w-full">
+      <img src={bg1} className="w-full h-full object-cover max-h-[600px]" />
+    </div>
+
+    {/* Right - Text */}
+    <div className="bg-red-600 flex items-center">
+      <div className="p-6 sm:p-10 flex flex-col">
+        <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white uppercase">
+          Get 20% off in Seasonal Product
+        </span>
+        <div className="my-4 h-0.5 w-full bg-gray-300" />
+        <span className="mb-4 text-xl sm:text-2xl md:text-3xl font-bold uppercase text-white">
+          Chanel SCENTS
+        </span>
+        <span className="mb-4 text-lg sm:text-xl font-bold capitalize text-white">
+          Item #23720 (In Stock)
+        </span>
+        <span className="mb-6 text-base sm:text-lg font-bold text-white">
+          Indulge in exclusive savings on our seasonal selections and
+          iconic Chanel fragrances. A perfect moment to experience
+          elegance at an exceptional value.
+        </span>
+        <div className="mt-4">
+          <button
+            type="button"
+            className="flex items-center gap-2 rounded-lg px-4 py-2 text-sm sm:text-base md:text-lg font-medium uppercase text-white dark:bg-black"
+          >
+            <span>Buy Now</span>
+            <FaArrowRight className="text-red-600 text-lg md:text-xl" />
+          </button>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-      {/* Promotional Section */}
-      <div className="mt-25 px-[60px]">
-        <div className="grid grid-cols-2 border-2 border-black divide-x-2 divide-black">
-          {/* Left Column */}
-          <div className=" ">
-            <img src={bg1} className="h-150 w-full" />
-          </div>
-
-          {/* Right Column */}
-          <div className=" bg-red-600">
-            <div className="px-10 pt-10 flex flex-col">
-              <span className=" text-5xl font-bold text-white uppercase ">
-                Get 20% off in Seasonal Product
-              </span>
-              <div className="mb-15 mt-4 h-0.5 w-full bg-gray-300" />
-              <span className="mb-8 uppercase font-bold text-white text-3xl">
-                Chanel SCENTS
-              </span>
-              <span className=" mb-8 capitalize font-bold text-white text-3xl">
-                Item #23720 (In Stock)
-              </span>
-              <span className="mb-8 font-bold text-white text-lg">
-                Indulge in exclusive savings on our seasonal selections and
-                iconic Chanel fragrances. A perfect moment to experience
-                elegance at an exceptional value.
-              </span>
-              <div className="mt-10 flex justify-start">
-                <button
-                  type="button"
-                  className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base md:px-5 md:py-2.5 md:text-lg font-medium uppercase text-white dark:bg-black"
-                >
-                  <span>Buy Now</span>
-                  <FaArrowRight className="text-red-600 text-base sm:text-lg md:text-xl" />
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Limited Editions Section */}
-      <div className="w-full flex justify-between items-start mt-25 px-[60px]">
-        <div className="flex flex-col max-w-[600px]">
-          <span className="text-5xl font-bold uppercase w-full">
-            The Art of Scent in Limited Editions
-          </span>
-          <div className="mt-2 h-0.5 w-full bg-gray-300" />
-          <div className="mt-4 text-justify text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-bold">
-            Discover a rare collection of limited-edition perfumes, each crafted
-            with precision and distinction. These exclusive scents are designed
-            for true connoisseurs, offering elegance, depth, and a touch of
-            rarity that sets them apart. Available only for a limited time.
-          </div>
+      <div className="w-full flex flex-col lg:flex-row justify-between items-start mt-25 px-6 lg:px-[60px] gap-10">
+  {/* Text Section */}
+  <div className="flex flex-col max-w-full lg:max-w-[600px]">
+    <span className="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase w-full">
+      The Art of Scent in Limited Editions
+    </span>
+    <div className="mt-2 h-0.5 w-full bg-gray-300" />
+    <div className="mt-4 text-justify text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-bold">
+      Discover a rare collection of limited-edition perfumes, each crafted
+      with precision and distinction. These exclusive scents are designed
+      for true connoisseurs, offering elegance, depth, and a touch of
+      rarity that sets them apart. Available only for a limited time.
+    </div>
+  </div>
+
+  {/* Cards Section */}
+  <div className="flex flex-col sm:flex-row flex-wrap gap-6 justify-center lg:justify-between max-w-full lg:max-w-[650px]">
+    {/* Card 1 */}
+    <div className="flex flex-col max-w-[250px] w-full">
+      <div className="grid grid-rows-[auto_90px] border-2 border-black divide-y-2 divide-black">
+        <div className="p-2 flex justify-center">
+          <img src={bg3} alt="" className="w-full h-48 object-cover" />
         </div>
-
-        <div className="flex max-w-[650px] justify-between gap-10">
-          <div className="flex flex-col max-w-[250px]">
-            <div className="grid grid-rows-[auto_90px] border-2 border-black divide-y-2 divide-black">
-              <div className="p-2 flex flex-wrap justify-center">
-                <img src={bg3} alt="" className="w-50 h-50 object-cover" />
-              </div>
-
-              <div className="p-2 flex flex-col h-[100px]">
-                <span className="text-sm sm:text-base md:text-sm lg:text-sm leading-relaxed font-bold uppercase">
-                  ARMANI ROSE D'ARABIE LIMITED EDITION - 100ml
-                </span>
-                <div className="flex justify-between items-center space-x-1">
-                  <span className="text-xl leading-relaxed font-bold uppercase">
-                    $330
-                  </span>
-                  <div className="flex">
-                    <button
-                      type="button"
-                      className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base md:px-3 md:py-1.5 md:text-sm  dark:bg-black"
-                    >
-                      <FaArrowRight className="text-red-600 text-base sm:text-sm md:text-sm" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-col max-w-[250px]">
-            <div className="grid grid-rows-[auto_90px] border-2 border-black divide-y-2 divide-black">
-              <div className="p-2 flex flex-wrap justify-center">
-                <img src={bg2} alt="" className="w-50 h-50 object-cover" />
-              </div>
-
-              <div className="p-2 flex flex-col h-[100px]">
-                <span className="text-sm sm:text-base md:text-sm lg:text-sm leading-relaxed font-bold uppercase">
-                  Sauvage Elixir - Limited Edition - 60ml
-                </span>
-                <div className="flex justify-between items-center space-x-1">
-                  <span className="text-xl leading-relaxed font-bold uppercase">
-                    $200
-                  </span>
-                  <div className="flex">
-                    <button
-                      type="button"
-                      className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base md:px-3 md:py-1.5 md:text-sm  dark:bg-black"
-                    >
-                      <FaArrowRight className="text-red-600 text-base sm:text-sm md:text-sm" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div className="p-2 flex flex-col h-[100px]">
+          <span className="text-xs sm:text-sm md:text-sm lg:text-sm leading-relaxed font-bold uppercase">
+            ARMANI ROSE D'ARABIE LIMITED EDITION - 100ml
+          </span>
+          <div className="flex justify-between items-center mt-2">
+            <span className="text-lg sm:text-xl font-bold uppercase">
+              $330
+            </span>
+            <button
+              type="button"
+              className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm dark:bg-black"
+            >
+              <FaArrowRight className="text-red-600 text-sm" />
+            </button>
           </div>
         </div>
       </div>
+    </div>
+
+    {/* Card 2 */}
+    <div className="flex flex-col max-w-[250px] w-full">
+      <div className="grid grid-rows-[auto_90px] border-2 border-black divide-y-2 divide-black">
+        <div className="p-2 flex justify-center">
+          <img src={bg2} alt="" className="w-full h-48 object-cover" />
+        </div>
+        <div className="p-2 flex flex-col h-[100px]">
+          <span className="text-xs sm:text-sm md:text-sm lg:text-sm leading-relaxed font-bold uppercase">
+            Sauvage Elixir - Limited Edition - 60ml
+          </span>
+          <div className="flex justify-between items-center mt-2">
+            <span className="text-lg sm:text-xl font-bold uppercase">
+              $200
+            </span>
+            <button
+              type="button"
+              className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm dark:bg-black"
+            >
+              <FaArrowRight className="text-red-600 text-sm" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
       {/* Customer Reviews Section */}
       <div className="mt-25 flex flex-col">
