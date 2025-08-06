@@ -6,6 +6,7 @@ import { RiUserStarLine } from "react-icons/ri";
 import bg1 from "../images/background/bg1.jpg";
 import bg2 from "../images/background/bg2.png";
 import bg3 from "../images/background/bg3.jpg";
+import bg4 from "../images/background/bg4.jpg";
 import customer1 from "../images/background/customer/customer1.jpg";
 import customer2 from "../images/background/customer/customer2.jpg";
 import customer3 from "../images/background/customer/customer3.jpeg";
@@ -23,71 +24,77 @@ import MyEuphoria from "../images/perfumes/background/MyEuphoria.jpg";
 
 function Home() {
   return (
-    <div className="relative w-full flex px-[60px] flex-col">
-      <img
-        src={backgroundimg}
-        alt=""
-        className="mx-auto flex object-contain h-[800px] z-10"
-      />
+    <div className="relative w-full flex  flex-col">
+      {/*--Header Section--*/}
+      <div className="relative w-full h-[800px] overflow-hidden">
+        {/* TEXT: Underneath the image */}
+        <div className="relative z-0 px-[60px] pt-10 uppercase font-extrabold text-4xl sm:text-6xl md:text-8xl lg:text-9xl flex flex-col items-start">
+          <span>Welcome to the</span>
+          <span>world</span>
+          <span>of scent</span>
 
-      {/* Main Heading Section */}
-      <div className="flex-col pt-8 uppercase font-extrabold text-4xl sm:text-6xl md:text-8xl lg:text-9xl absolute w-full h-full flex items-start">
-        <span>Welcome to the</span>
-        <span>world</span>
-        <span>of scent</span>
-        <div className="pt-10 sm:pt-16 md:pt-20">
-          <button
-            type="button"
-            className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base md:px-5 md:py-2.5 md:text-lg font-medium uppercase text-white dark:bg-black"
-          >
-            <span>Shop Now</span>
-            <FaArrowRight className="text-red-600 text-base sm:text-lg md:text-xl" />
-          </button>
+          <div className="pt-10 sm:pt-16 md:pt-20">
+            <button
+              type="button"
+              className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base md:px-5 md:py-2.5 md:text-lg font-medium uppercase text-white dark:bg-black"
+            >
+              <span>Shop Now</span>
+              <FaArrowRight className="text-red-600 text-base sm:text-lg md:text-xl" />
+            </button>
+          </div>
+        </div>
+
+        {/* IMAGE: on top of the text */}
+        <img
+          src={backgroundimg}
+          alt="Perfume Background"
+          className="absolute top-0 left-0 w-full h-full object-contain z-10"
+        />
+
+        {/* Right Side Paragraph and Info Boxes */}
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 z-20 max-w-[500px] px-4 sm:px-8 md:pr-[60px] text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-justify font-bold">
+          <div>
+            Reveal the essence of timeless scent, where every fragrance is a
+            refined harmony of elegance and identity. Expertly composed and
+            artfully bottled, each creation becomes a signature of distinction
+            for those who appreciate beauty beyond the ordinary.
+          </div>
+
+          <div className="mt-6 flex flex-col gap-4">
+            <div className="flex items-center border border-black p-1 w-54 gap-3">
+              <RiUserStarLine className="text-4xl" />
+              <div className="text-center w-full">
+                <div className="text-red-600 font-bold text-2xl">100+</div>
+                <div className="font-extrabold text-sm sm:text-xl">
+                  Trusted Clients
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-center border border-black p-1 w-54 gap-3">
+              <GiPerfumeBottle className="text-5xl" />
+              <div className="text-center w-full">
+                <div className="text-red-600 font-bold text-2xl">50+</div>
+                <div className="font-extrabold text-sm sm:text-xl">
+                  Luxury Perfume
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-center border border-black p-1 w-54 gap-3">
+              <FaHandshake className="text-4xl" />
+              <div className="text-center w-full">
+                <div className="text-red-600 font-bold text-2xl">10y+</div>
+                <div className="font-extrabold text-sm sm:text-xl">
+                  Giving Best Service
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Right Side Paragraph and Info Boxes */}
-      <div className="flex flex-col absolute right-0 top-100 -translate-y-1/2 max-w-[500px] px-4 sm:px-8 md:pr-[60px] text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-justify font-bold">
-        <div>
-          Reveal the essence of timeless scent, where every fragrance is a
-          refined harmony of elegance and identity. Expertly composed and
-          artfully bottled, each creation becomes a signature of distinction for
-          those who appreciate beauty beyond the ordinary.
-        </div>
-
-        <div className="mt-6 flex flex-col gap-4">
-          <div className="flex items-center border border-black p-1 w-54 gap-3">
-            <RiUserStarLine className="text-4xl" />
-            <div className="text-center w-full">
-              <div className="text-red-600 font-bold text-2xl">100+</div>
-              <div className="font-extrabold text-sm sm:text-xl">
-                Trusted Clients
-              </div>
-            </div>
-          </div>
-
-          <div className="flex items-center border border-black p-1 w-54 gap-3">
-            <GiPerfumeBottle className="text-5xl" />
-            <div className="text-center w-full">
-              <div className="text-red-600 font-bold text-2xl">50+</div>
-              <div className="font-extrabold text-sm sm:text-xl">
-                Luxury Perfume
-              </div>
-            </div>
-          </div>
-
-          <div className="flex items-center border border-black p-1 w-54 gap-3">
-            <FaHandshake className="text-4xl" />
-            <div className="text-center w-full">
-              <div className="text-red-600 font-bold text-2xl">10y+</div>
-              <div className="font-extrabold text-sm sm:text-xl">
-                Giving Best Service
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      {/* Brands Section */}
       <div className="w-full h-14 bg-black m-0 p-4 flex flex-row gap-12 justify-center items-center">
         <img src={brand1} alt="brand1" className="h-auto max-h-10" />
         <img src={brand2} alt="brand2" className="h-auto max-h-10" />
@@ -95,7 +102,8 @@ function Home() {
         <img src={brand4} alt="brand4" className="h-auto max-h-10" />
       </div>
 
-      <div className="w-full flex justify-between items-start mt-10">
+      {/* Timeline Section */}
+      <div className="w-full flex justify-between items-start mt-10 px-[60px]">
         <div className="flex flex-col gap-10 max-w-[450px]">
           <span className="text-9xl font-bold">2015</span>
 
@@ -168,7 +176,9 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="w-full flex justify-between items-start">
+
+      {/* Most Adored Scents Section */}
+      <div className="w-full flex justify-between items-start px-[60px]">
         <div className="flex flex-col  max-w-[850px] mt-30">
           <span className="text-5xl font-bold uppercase w-full">
             Our Most Adored Scents
@@ -198,7 +208,8 @@ function Home() {
         </div>
       </div>
 
-      <div className="flex flex-row justify-center gap-10 mx-20">
+      {/* Perfume Cards Section */}
+      <div className="flex flex-row justify-center gap-10 mx-20 px-[60px]">
         <div className="w-full flex mt-20 justify-between">
           <div className="grid grid-rows-[auto_100px] border-2 border-black divide-y-2 divide-black">
             <div className="p-4 flex flex-wrap gap-4">
@@ -322,7 +333,9 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="mt-25">
+
+      {/* Promotional Section */}
+      <div className="mt-25 px-[60px]">
         <div className="grid grid-cols-2 border-2 border-black divide-x-2 divide-black">
           {/* Left Column */}
           <div className=" ">
@@ -360,7 +373,9 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="w-full flex justify-between items-start mt-25">
+
+      {/* Limited Editions Section */}
+      <div className="w-full flex justify-between items-start mt-25 px-[60px]">
         <div className="flex flex-col max-w-[600px]">
           <span className="text-5xl font-bold uppercase w-full">
             The Art of Scent in Limited Editions
@@ -431,8 +446,9 @@ function Home() {
         </div>
       </div>
 
+      {/* Customer Reviews Section */}
       <div className="mt-25 flex flex-col">
-        <div>
+        <div className="px-[60px]">
           <span className="text-5xl font-bold uppercase w-full">
             What Our Customers Are Saying
           </span>
@@ -445,7 +461,7 @@ function Home() {
         </div>
 
         {/* 3 Rows x 2 Columns Grid */}
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-0.125">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-0.125 px-0">
           {/* Row 1 */}
           <div className="p-6 border bg-black text-white flex flex-col items-center gap-2.5">
             <img
@@ -519,6 +535,32 @@ function Home() {
               and a seamless, high-end shopping experience tailored for
               fragrance lovers."
             </span>
+          </div>
+        </div>
+      </div>
+
+      {/* Promotional Section with Background Image */}
+      <div className="w-full flex mt-25 px-[60px]">
+        <div className="relative border-2 w-full h-[600px] p-2 overflow-hidden">
+          {/* Background Image */}
+          <img
+            src={bg4}
+            className="object-cover w-full h-full filter grayscale brightness-50"
+            alt=""
+          />
+
+          {/* Overlay Content: Text + Button */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 flex flex-col items-center text-center space-y-6">
+            <span className="text-white text-4xl font-bold uppercase max-w-[800px]">
+              Step into a world where scent defines your true essence
+            </span>
+            <button
+              type="button"
+              className="flex items-center gap-2 rounded-lg px-5 py-2.5 text-lg font-medium uppercase text-white bg-black"
+            >
+              <span>Shop Now</span>
+              <FaArrowRight className="text-red-600 text-xl" />
+            </button>
           </div>
         </div>
       </div>
