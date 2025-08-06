@@ -6,6 +6,12 @@ import { RiUserStarLine } from "react-icons/ri";
 import bg1 from "../images/background/bg1.jpg";
 import bg2 from "../images/background/bg2.png";
 import bg3 from "../images/background/bg3.jpg";
+import customer1 from "../images/background/customer/customer1.jpg";
+import customer2 from "../images/background/customer/customer2.jpg";
+import customer3 from "../images/background/customer/customer3.jpeg";
+import customer4 from "../images/background/customer/customer4.jpg";
+import customer5 from "../images/background/customer/customer5.jpg";
+import customer6 from "../images/background/customer/customer6.jpg";
 import backgroundimg from "../images/backgroundimg.png";
 import brand1 from "../images/brands/brand1.png";
 import brand2 from "../images/brands/brand2.png";
@@ -368,70 +374,152 @@ function Home() {
           </div>
         </div>
 
-<div className="flex max-w-[650px] justify-between gap-10">
-        <div className="flex flex-col max-w-[250px]">
-          <div className="grid grid-rows-[auto_90px] border-2 border-black divide-y-2 divide-black">
-            <div className="p-2 flex flex-wrap justify-center">
-              <img
-                src={bg3}
-                alt=""
-                className="w-50 h-50 object-cover"
-              />
-            </div>
+        <div className="flex max-w-[650px] justify-between gap-10">
+          <div className="flex flex-col max-w-[250px]">
+            <div className="grid grid-rows-[auto_90px] border-2 border-black divide-y-2 divide-black">
+              <div className="p-2 flex flex-wrap justify-center">
+                <img src={bg3} alt="" className="w-50 h-50 object-cover" />
+              </div>
 
-            <div className="p-2 flex flex-col h-[100px]">
-              <span className="text-sm sm:text-base md:text-sm lg:text-sm leading-relaxed font-bold uppercase">
-                ARMANI ROSE D'ARABIE LIMITED EDITION - 100ml
-              </span>
-               <div className="flex justify-between items-center space-x-1">
-                <span className="text-xl leading-relaxed font-bold uppercase">
-                  $330
-                </span> 
-                <div className="flex">
-                <button
-                  type="button"
-                  className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base md:px-3 md:py-1.5 md:text-sm  dark:bg-black"
-                >
-                  <FaArrowRight className="text-red-600 text-base sm:text-sm md:text-sm" />
-                </button>
-              </div></div>
+              <div className="p-2 flex flex-col h-[100px]">
+                <span className="text-sm sm:text-base md:text-sm lg:text-sm leading-relaxed font-bold uppercase">
+                  ARMANI ROSE D'ARABIE LIMITED EDITION - 100ml
+                </span>
+                <div className="flex justify-between items-center space-x-1">
+                  <span className="text-xl leading-relaxed font-bold uppercase">
+                    $330
+                  </span>
+                  <div className="flex">
+                    <button
+                      type="button"
+                      className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base md:px-3 md:py-1.5 md:text-sm  dark:bg-black"
+                    >
+                      <FaArrowRight className="text-red-600 text-base sm:text-sm md:text-sm" />
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
-            
           </div>
-        
+
+          <div className="flex flex-col max-w-[250px]">
+            <div className="grid grid-rows-[auto_90px] border-2 border-black divide-y-2 divide-black">
+              <div className="p-2 flex flex-wrap justify-center">
+                <img src={bg2} alt="" className="w-50 h-50 object-cover" />
+              </div>
+
+              <div className="p-2 flex flex-col h-[100px]">
+                <span className="text-sm sm:text-base md:text-sm lg:text-sm leading-relaxed font-bold uppercase">
+                  Sauvage Elixir - Limited Edition - 60ml
+                </span>
+                <div className="flex justify-between items-center space-x-1">
+                  <span className="text-xl leading-relaxed font-bold uppercase">
+                    $200
+                  </span>
+                  <div className="flex">
+                    <button
+                      type="button"
+                      className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base md:px-3 md:py-1.5 md:text-sm  dark:bg-black"
+                    >
+                      <FaArrowRight className="text-red-600 text-base sm:text-sm md:text-sm" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-25 flex flex-col">
+        <div>
+          <span className="text-5xl font-bold uppercase w-full">
+            What Our Customers Are Saying
+          </span>
+          <div className="mt-2 h-0.5 w-full bg-gray-300" />
+          <div className="mt-4 text-justify text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-bold">
+            Real stories from those who’ve experienced the essence of Veloura.
+            Explore thoughtful reviews from customers who found their signature
+            scent in our timeless collection.
+          </div>
         </div>
 
-        <div className="flex flex-col max-w-[250px]">
-          <div className="grid grid-rows-[auto_90px] border-2 border-black divide-y-2 divide-black">
-            <div className="p-2 flex flex-wrap justify-center">
-              <img
-                src={bg2}
-                alt=""
-                className="w-50 h-50 object-cover"
-              />
-            </div>
-
-            <div className="p-2 flex flex-col h-[100px]">
-              <span className="text-sm sm:text-base md:text-sm lg:text-sm leading-relaxed font-bold uppercase">
-                Sauvage Elixir - Limited Edition - 60ml
-              </span>
-               <div className="flex justify-between items-center space-x-1">
-                <span className="text-xl leading-relaxed font-bold uppercase">
-                  $200
-                </span> 
-                <div className="flex">
-                <button
-                  type="button"
-                  className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base md:px-3 md:py-1.5 md:text-sm  dark:bg-black"
-                >
-                  <FaArrowRight className="text-red-600 text-base sm:text-sm md:text-sm" />
-                </button>
-              </div></div>
-            </div>
-            
+        {/* 3 Rows x 2 Columns Grid */}
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-0.125">
+          {/* Row 1 */}
+          <div className="p-6 border bg-black text-white flex flex-col items-center gap-2.5">
+            <img
+              src={customer1}
+              className="w-15 h-15 object-cover rounded-full filter grayscale"
+            />
+            <span className="font-bold text-xl uppercase">Olivia Bennett</span>
+            <span className="text-md italic">
+              "Every scent I’ve tried from Veloura feels like it was made just
+              for me. Incredibly sophisticated, long-lasting, and truly
+              unforgettable."
+            </span>
           </div>
-        
-        </div>
+          <div className="p-6 border bg-black text-white flex flex-col items-center gap-2.5">
+            <img
+              src={customer2}
+              className="w-15 h-15 object-cover rounded-full filter grayscale"
+            />
+            <span className="font-bold text-xl uppercase">
+              Marcus Ellington
+            </span>
+            <span className="text-md italic">
+              "I purchased a Burberry perfume from VELOURA, and the experience
+              was seamless. The perfume is timeless and refined — I’ll
+              definitely return for more."
+            </span>
+          </div>
+          <div className="p-6 border bg-black text-white flex flex-col items-center gap-2.5">
+            <img
+              src={customer3}
+              className="w-15 h-15 object-cover rounded-full filter grayscale"
+            />
+            <span className="font-bold text-xl uppercase">Isabelle Moreau</span>
+            <span className="text-md italic">
+              "I discovered my signature scent from Armani through VELOURA.
+              Exceptional service and a truly premium shopping experience."
+            </span>
+          </div>
+
+          {/* Row 2 */}
+          <div className="p-6 border bg-black text-white flex flex-col items-center gap-2.5">
+            <img
+              src={customer4}
+              className="w-15 h-15 object-cover rounded-full filter grayscale"
+            />
+            <span className="font-bold text-xl uppercase">Daniel Kovac</span>
+            <span className="text-md italic">
+              "The Chanel fragrance I purchased from VELOURA is authentic and
+              long-lasting. I appreciate the quality and trusted selection."
+            </span>
+          </div>
+          <div className="p-6 border bg-black text-white flex flex-col items-center gap-2.5">
+            <img
+              src={customer5}
+              className="w-15 h-15 object-cover rounded-full filter grayscale"
+            />
+            <span className="font-bold text-xl uppercase">Sofia Rinaldi</span>
+            <span className="text-md italic">
+              "Got my Calvin Klein perfume from VELOURA with a 30% seasonal
+              offer. Great deal and a smooth shopping experience."
+            </span>
+          </div>
+          <div className="p-6 border bg-black text-white flex flex-col items-center gap-2.5">
+            <img
+              src={customer6}
+              className="w-15 h-15 object-cover rounded-full filter grayscale"
+            />
+            <span className="font-bold text-xl uppercase">Liam Carter</span>
+            <span className="text-md italic">
+              "VELOURA impressed me with its elegant range of luxury perfumes
+              and a seamless, high-end shopping experience tailored for
+              fragrance lovers."
+            </span>
+          </div>
         </div>
       </div>
     </div>
