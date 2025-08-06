@@ -4,6 +4,8 @@ import { GiPerfumeBottle } from "react-icons/gi";
 import { RiUserStarLine } from "react-icons/ri";
 
 import bg1 from "../images/background/bg1.jpg";
+import bg2 from "../images/background/bg2.png";
+import bg3 from "../images/background/bg3.jpg";
 import backgroundimg from "../images/backgroundimg.png";
 import brand1 from "../images/brands/brand1.png";
 import brand2 from "../images/brands/brand2.png";
@@ -340,20 +342,97 @@ function Home() {
                 elegance at an exceptional value.
               </span>
               <div className="mt-10 flex justify-start">
-            <button
-              type="button"
-              className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base md:px-5 md:py-2.5 md:text-lg font-medium uppercase text-white dark:bg-black"
-            >
-              <span>Buy Now</span>
-              <FaArrowRight className="text-red-600 text-base sm:text-lg md:text-xl" />
-            </button>
+                <button
+                  type="button"
+                  className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base md:px-5 md:py-2.5 md:text-lg font-medium uppercase text-white dark:bg-black"
+                >
+                  <span>Buy Now</span>
+                  <FaArrowRight className="text-red-600 text-base sm:text-lg md:text-xl" />
+                </button>
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
+      <div className="w-full flex justify-between items-start mt-25">
+        <div className="flex flex-col max-w-[600px]">
+          <span className="text-5xl font-bold uppercase w-full">
+            The Art of Scent in Limited Editions
+          </span>
+          <div className="mt-2 h-0.5 w-full bg-gray-300" />
+          <div className="mt-4 text-justify text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-bold">
+            Discover a rare collection of limited-edition perfumes, each crafted
+            with precision and distinction. These exclusive scents are designed
+            for true connoisseurs, offering elegance, depth, and a touch of
+            rarity that sets them apart. Available only for a limited time.
+          </div>
+        </div>
+
+<div className="flex max-w-[650px] justify-between gap-10">
+        <div className="flex flex-col max-w-[250px]">
+          <div className="grid grid-rows-[auto_90px] border-2 border-black divide-y-2 divide-black">
+            <div className="p-2 flex flex-wrap justify-center">
+              <img
+                src={bg3}
+                alt=""
+                className="w-50 h-50 object-cover"
+              />
+            </div>
+
+            <div className="p-2 flex flex-col h-[100px]">
+              <span className="text-sm sm:text-base md:text-sm lg:text-sm leading-relaxed font-bold uppercase">
+                ARMANI ROSE D'ARABIE LIMITED EDITION - 100ml
+              </span>
+               <div className="flex justify-between items-center space-x-1">
+                <span className="text-xl leading-relaxed font-bold uppercase">
+                  $330
+                </span> 
+                <div className="flex">
+                <button
+                  type="button"
+                  className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base md:px-3 md:py-1.5 md:text-sm  dark:bg-black"
+                >
+                  <FaArrowRight className="text-red-600 text-base sm:text-sm md:text-sm" />
+                </button>
+              </div></div>
             </div>
             
           </div>
-          
-        </div>
         
+        </div>
+
+        <div className="flex flex-col max-w-[250px]">
+          <div className="grid grid-rows-[auto_90px] border-2 border-black divide-y-2 divide-black">
+            <div className="p-2 flex flex-wrap justify-center">
+              <img
+                src={bg2}
+                alt=""
+                className="w-50 h-50 object-cover"
+              />
+            </div>
+
+            <div className="p-2 flex flex-col h-[100px]">
+              <span className="text-sm sm:text-base md:text-sm lg:text-sm leading-relaxed font-bold uppercase">
+                Sauvage Elixir - Limited Edition - 60ml
+              </span>
+               <div className="flex justify-between items-center space-x-1">
+                <span className="text-xl leading-relaxed font-bold uppercase">
+                  $200
+                </span> 
+                <div className="flex">
+                <button
+                  type="button"
+                  className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base md:px-3 md:py-1.5 md:text-sm  dark:bg-black"
+                >
+                  <FaArrowRight className="text-red-600 text-base sm:text-sm md:text-sm" />
+                </button>
+              </div></div>
+            </div>
+            
+          </div>
+        
+        </div>
+        </div>
       </div>
     </div>
   );
