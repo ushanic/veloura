@@ -103,79 +103,90 @@ function Home() {
       </div>
 
       {/* Timeline Section */}
-      <div className="w-full flex justify-between items-start mt-10 px-[60px]">
-        <div className="flex flex-col gap-10 max-w-[450px]">
-          <span className="text-9xl font-bold">2015</span>
+      <div className="w-full flex flex-col lg:flex-row justify-between items-start mt-10 px-4 sm:px-8 md:px-16 lg:px-[60px] gap-10">
+  {/* Left Column: Timeline */}
+  <div className="flex flex-col gap-10 max-w-full lg:max-w-[450px]">
+    <span className="text-9xl font-bold">2015</span>
 
-          <div className="flex items-start justify-between">
-            <div className="flex flex-col max-w-[420px]">
-              <span className="text-sm sm:text-base md:text-lg lg:text-xl font-bold">
-                Introduced premium perfume collections for all
-              </span>
-              <div className="mt-2 space-y-1">
-                <div className="h-0.25 w-118 bg-gray-300" />
-              </div>
-            </div>
-            <span className="text-sm sm:text-base md:text-lg lg:text-xl font-bold ml-4 self-start">
-              2017
-            </span>
-          </div>
-          <div className="flex items-start justify-between">
-            <div className="flex flex-col max-w-[420px]">
-              <span className="text-sm sm:text-base md:text-lg lg:text-xl font-bold">
-                Enhanced curation with timeless signature scents
-              </span>
-              <div className="mt-2 space-y-1">
-                <div className="h-0.25 w-118 bg-gray-300" />
-              </div>
-            </div>
-            <span className="text-sm sm:text-base md:text-lg lg:text-xl font-bold ml-4 self-start">
-              2020
-            </span>
-          </div>
-          <div className="flex items-start justify-between">
-            <div className="flex flex-col max-w-[420px]">
-              <span className="text-sm sm:text-base md:text-lg lg:text-xl font-bold">
-                Redesigned experience for modern fragrance lovers
-              </span>
-              <div className="mt-2 space-y-1">
-                <div className="h-0.25 w-118 bg-gray-300" />
-              </div>
-            </div>
-            <span className="text-sm sm:text-base md:text-lg lg:text-xl font-bold ml-4 self-start">
-              2024
-            </span>
-          </div>
-        </div>
+    {/* Timeline Entry 1 */}
+    <div className="flex items-start justify-between">
+      <div className="flex flex-col max-w-[420px]">
+        <span className="text-sm sm:text-base md:text-lg lg:text-xl font-bold">
+          Introduced premium perfume collections for all
+        </span>
+        <div className="mt-2 space-y-1">
+          <div className="h-0.5 w-full sm:w-[350px] lg:w-[470px] bg-gray-300" />
 
-        <div className="flex flex-col mt-15 max-w-[675px] w-full">
-          <div className="flex justify-between items-center w-full">
-            <span className="text-5xl font-bold uppercase">
-              A Journey Through Scent
-            </span>
-          </div>
-
-          <div className="mt-2 h-0.5 w-full bg-gray-300" />
-
-          <div className="mt-4 text-justify text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-bold">
-            VELOURA is a curated destination for timeless fragrances. We bring
-            together an exclusive selection of perfumes known for their
-            elegance, depth, and character. Each scent is carefully chosen to
-            inspire confidence and individuality, helping you find the perfect
-            fragrance to express your personal story with grace and distinction.
-          </div>
-
-          <div className="mt-10 flex justify-start">
-            <button
-              type="button"
-              className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base md:px-5 md:py-2.5 md:text-lg font-medium uppercase text-white dark:bg-black"
-            >
-              <span>explore more</span>
-              <FaArrowRight className="text-red-600 text-base sm:text-lg md:text-xl" />
-            </button>
-          </div>
         </div>
       </div>
+      <span className="text-sm sm:text-base md:text-lg lg:text-xl font-bold ml-4 self-start">
+        2017
+      </span>
+    </div>
+
+    {/* Timeline Entry 2 */}
+    <div className="flex items-start justify-between">
+      <div className="flex flex-col max-w-[420px]">
+        <span className="text-sm sm:text-base md:text-lg lg:text-xl font-bold">
+          Enhanced curation with timeless signature scents
+        </span>
+        <div className="mt-2 space-y-1">
+          <div className="h-0.5 w-full sm:w-[350px] lg:w-[470px] bg-gray-300" />
+
+        </div>
+      </div>
+      <span className="text-sm sm:text-base md:text-lg lg:text-xl font-bold ml-4 self-start">
+        2020
+      </span>
+    </div>
+
+    {/* Timeline Entry 3 */}
+    <div className="flex items-start justify-between">
+      <div className="flex flex-col max-w-[420px]">
+        <span className="text-sm sm:text-base md:text-lg lg:text-xl font-bold">
+          Redesigned experience for modern fragrance lovers
+        </span>
+        <div className="mt-2 space-y-1">
+          <div className="h-0.5 w-full sm:w-[350px] lg:w-[470px] bg-gray-300" />
+
+        </div>
+      </div>
+      <span className="text-sm sm:text-base md:text-lg lg:text-xl font-bold ml-4 self-start">
+        2024
+      </span>
+    </div>
+  </div>
+
+  {/* Right Column: Description */}
+  <div className="flex flex-col mt-0 lg:mt-15 max-w-full lg:max-w-[675px] w-full">
+    <div className="flex justify-between items-center w-full">
+      <span className="text-5xl font-bold uppercase">
+        A Journey Through Scent
+      </span>
+    </div>
+
+    <div className="mt-2 h-0.5 w-full bg-gray-300" />
+
+    <div className="mt-4 text-justify text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-bold">
+      VELOURA is a curated destination for timeless fragrances. We bring
+      together an exclusive selection of perfumes known for their elegance,
+      depth, and character. Each scent is carefully chosen to inspire
+      confidence and individuality, helping you find the perfect fragrance
+      to express your personal story with grace and distinction.
+    </div>
+
+    <div className="mt-10 flex justify-start">
+      <button
+        type="button"
+        className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base md:px-5 md:py-2.5 md:text-lg font-medium uppercase text-white dark:bg-black"
+      >
+        <span>explore more</span>
+        <FaArrowRight className="text-red-600 text-base sm:text-lg md:text-xl" />
+      </button>
+    </div>
+  </div>
+</div>
+
 
       {/* Most Adored Scents Section */}
       <div className="w-full flex justify-between items-start px-[60px]">
