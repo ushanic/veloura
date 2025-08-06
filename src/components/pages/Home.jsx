@@ -189,161 +189,141 @@ function Home() {
 
 
       {/* Most Adored Scents Section */}
-      <div className="w-full flex justify-between items-start px-[60px]">
-        <div className="flex flex-col  max-w-[850px] mt-30">
-          <span className="text-5xl font-bold uppercase w-full">
-            Our Most Adored Scents
-          </span>
-          <div className="mt-2 h-0.5 w-full bg-gray-300" />
-        </div>
+      <div className="w-full flex flex-col lg:flex-row justify-between items-start px-4 sm:px-8 md:px-12 lg:px-[60px] gap-10">
+  {/* Left Column: Heading */}
+  <div className="flex flex-col max-w-full lg:max-w-[850px] mt-10 lg:mt-30">
+    <span className="text-5xl font-bold uppercase w-full">
+      Our Most Adored Scents
+    </span>
+    <div className="mt-2 h-0.5 w-full bg-gray-300" />
+  </div>
 
-        <div className="flex flex-col mt-25 max-w-[575px] w-full">
-          <div className="flex justify-between items-center w-full"></div>
+  {/* Right Column: Description */}
+  <div className="flex flex-col max-w-full lg:max-w-[575px] w-full mt-10 lg:mt-25">
+    <div className="flex justify-between items-center w-full"></div>
 
-          <div className="mt-2 h-0.5 w-full bg-gray-300" />
+    <div className="mt-2 h-0.5 w-full bg-gray-300" />
 
-          <div className="mt-4 text-justify text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-bold">
-            Discover the top-selling perfumes in our exclusive collection
-            explore the most popular scents of the year form classic fragrances.
-          </div>
+    <div className="mt-4 text-justify text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-bold">
+      Discover the top-selling perfumes in our exclusive collection —
+      explore the most popular scents of the year from classic fragrances.
+    </div>
 
-          <div className="mt-10 flex justify-start">
-            <button
-              type="button"
-              className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base md:px-5 md:py-2.5 md:text-lg font-medium uppercase text-white dark:bg-black"
-            >
-              <span>view Fragrance</span>
-              <FaArrowRight className="text-red-600 text-base sm:text-lg md:text-xl" />
-            </button>
-          </div>
-        </div>
-      </div>
+    <div className="mt-10 flex justify-start">
+      <button
+        type="button"
+        className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base md:px-5 md:py-2.5 md:text-lg font-medium uppercase text-white dark:bg-black"
+      >
+        <span>view Fragrance</span>
+        <FaArrowRight className="text-red-600 text-base sm:text-lg md:text-xl" />
+      </button>
+    </div>
+  </div>
+</div>
+
 
       {/* Perfume Cards Section */}
-      <div className="flex flex-row justify-center gap-10 mx-20 px-[60px]">
-        <div className="w-full flex mt-20 justify-between">
-          <div className="grid grid-rows-[auto_100px] border-2 border-black divide-y-2 divide-black">
-            <div className="p-4 flex flex-wrap gap-4">
-              <img
-                src={DiorSauvage}
-                alt="Sauvage Eau de Parfum"
-                className="w-80 h-100 object-cover"
-              />
-            </div>
-
-            <div className="p-2 flex flex-col h-[100px]">
-              <span className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-bold uppercase">
-                Sauvage Parfum
-              </span>
-
-              <div className="flex justify-between items-center space-x-1">
-                {/* Stars */}
-                <div className="flex space-x-1">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <svg
-                      key={i}
-                      className="w-4 h-4 text-black"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 22 20"
-                    >
-                      <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                    </svg>
-                  ))}
-                </div>
-
-                {/* Price */}
-                <span className="text-4xl leading-relaxed font-bold uppercase">
-                  $160
-                </span>
-              </div>
-            </div>
-          </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 sm:px-8 md:px-12 lg:px-[60px] mt-20">
+  {/* CARD 1 */}
+  <div className="border-2 border-black divide-y-2 divide-black grid grid-rows-[auto_100px]">
+    <div className="p-4 flex justify-center">
+      <img
+        src={DiorSauvage}
+        alt="Sauvage Eau de Parfum"
+        className="w-80 h-100 object-cover"
+      />
+    </div>
+    <div className="p-2 flex flex-col h-[100px]">
+      <span className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-bold uppercase">
+        Sauvage Parfum
+      </span>
+      <div className="flex justify-between items-center space-x-1">
+        {/* Stars */}
+        <div className="flex space-x-1">
+          {Array.from({ length: 5 }).map((_, i) => (
+            <svg
+              key={i}
+              className="w-4 h-4 text-black"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 22 20"
+            >
+              <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+            </svg>
+          ))}
         </div>
-
-        <div className="w-full flex mt-20 justify-between">
-          <div className="grid grid-rows-[auto_100px] border-2 border-black divide-y-2 divide-black">
-            <div className="p-4 flex flex-wrap gap-4">
-              <img
-                src={MyEuphoria}
-                alt="Sauvage Eau de Parfum"
-                className="w-80 h-100 object-cover"
-              />
-            </div>
-
-            <div className="p-2 flex flex-col h-[100px]">
-              <span className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-bold uppercase">
-                My Euphoria Eau De Parfum
-              </span>
-
-              <div className="flex justify-between items-center space-x-1">
-                {/* Stars */}
-                <div className="flex space-x-1">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <svg
-                      key={i}
-                      className="w-4 h-4 text-black"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 22 20"
-                    >
-                      <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                    </svg>
-                  ))}
-                </div>
-
-                {/* Price */}
-                <span className="text-4xl leading-relaxed font-bold uppercase">
-                  $100
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="w-full flex mt-20 justify-between">
-          <div className="grid grid-rows-[auto_100px] border-2 border-black divide-y-2 divide-black">
-            <div className="p-4 flex flex-wrap gap-4">
-              <img
-                src={BoisTalisman}
-                alt="Sauvage Eau de Parfum"
-                className="w-80 h-100 object-cover"
-              />
-            </div>
-
-            <div className="p-2 flex flex-col h-[100px]">
-              <span className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-bold uppercase">
-                Bois Talisman
-              </span>
-
-              <div className="flex justify-between items-center space-x-1">
-                {/* Stars */}
-                <div className="flex space-x-1">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <svg
-                      key={i}
-                      className="w-4 h-4 text-black"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 22 20"
-                    >
-                      <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                    </svg>
-                  ))}
-                </div>
-
-                {/* Price */}
-                <span className="text-4xl leading-relaxed font-bold uppercase">
-                  $250
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <span className="text-4xl font-bold uppercase">$160</span>
       </div>
+    </div>
+  </div>
+
+  {/* CARD 2 */}
+  <div className="border-2 border-black divide-y-2 divide-black grid grid-rows-[auto_100px]">
+    <div className="p-4 flex justify-center">
+      <img
+        src={MyEuphoria}
+        alt="My Euphoria"
+        className="w-80 h-100 object-cover"
+      />
+    </div>
+    <div className="p-2 flex flex-col h-[100px]">
+      <span className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-bold uppercase">
+        My Euphoria Eau De Parfum
+      </span>
+      <div className="flex justify-between items-center space-x-1">
+        <div className="flex space-x-1">
+          {Array.from({ length: 5 }).map((_, i) => (
+            <svg
+              key={i}
+              className="w-4 h-4 text-black"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 22 20"
+            >
+              <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+            </svg>
+          ))}
+        </div>
+        <span className="text-4xl font-bold uppercase">$100</span>
+      </div>
+    </div>
+  </div>
+
+  {/* CARD 3 */}
+  <div className="border-2 border-black divide-y-2 divide-black grid grid-rows-[auto_100px]">
+    <div className="p-4 flex justify-center">
+      <img
+        src={BoisTalisman}
+        alt="Bois Talisman"
+        className="w-80 h-100 object-cover"
+      />
+    </div>
+    <div className="p-2 flex flex-col h-[100px]">
+      <span className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-bold uppercase">
+        Bois Talisman
+      </span>
+      <div className="flex justify-between items-center space-x-1">
+        <div className="flex space-x-1">
+          {Array.from({ length: 5 }).map((_, i) => (
+            <svg
+              key={i}
+              className="w-4 h-4 text-black"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 22 20"
+            >
+              <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+            </svg>
+          ))}
+        </div>
+        <span className="text-4xl font-bold uppercase">$250</span>
+      </div>
+    </div>
+  </div>
+</div>
 
       {/* Promotional Section */}
       <div className="mt-25 px-[60px]">
