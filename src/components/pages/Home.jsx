@@ -98,23 +98,42 @@ function Home() {
       {/* Brands Section */}
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 px-6 md:px-20 py-4 bg-black">
-  <div className="flex justify-center items-center">
-    <img src={brand1} alt="brand1" className="w-auto h-[60px] object-contain" />
-  </div>
-  <div className="flex justify-center items-center">
-    <img src={brand2} alt="brand2" className="w-auto h-[60px] object-contain" />
-  </div>
-  <div className="flex justify-center items-center">
-    <img src={brand3} alt="brand3" className="w-auto h-[60px] object-contain" />
-  </div>
-  <div className="flex justify-center items-center">
-    <img src={brand4} alt="brand4" className="w-auto h-[60px] object-contain" />
-  </div>
-  <div className="flex justify-center items-center">
-    <img src={brand5} alt="brand5" className="w-auto h-[60px] object-contain" />
-  </div>
-</div>
-
+        <div className="flex justify-center items-center">
+          <img
+            src={brand1}
+            alt="brand1"
+            className="w-auto h-[60px] object-contain"
+          />
+        </div>
+        <div className="flex justify-center items-center">
+          <img
+            src={brand2}
+            alt="brand2"
+            className="w-auto h-[60px] object-contain"
+          />
+        </div>
+        <div className="flex justify-center items-center">
+          <img
+            src={brand3}
+            alt="brand3"
+            className="w-auto h-[60px] object-contain"
+          />
+        </div>
+        <div className="flex justify-center items-center">
+          <img
+            src={brand4}
+            alt="brand4"
+            className="w-auto h-[60px] object-contain"
+          />
+        </div>
+        <div className="flex justify-center items-center">
+          <img
+            src={brand5}
+            alt="brand5"
+            className="w-auto h-[60px] object-contain"
+          />
+        </div>
+      </div>
 
       {/* Timeline Section */}
       <div className="w-full flex flex-col lg:flex-row justify-between items-start mt-10 px-4 sm:px-8 md:px-16 lg:px-[60px] gap-10">
