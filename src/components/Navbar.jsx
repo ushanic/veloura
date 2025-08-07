@@ -37,7 +37,7 @@ function NavBar() {
           </button>
         </div>
       </div>
-      <div className="flex-1 flex justify-center items-center absolute w-full">
+      <div className="absolute left-1/2 transform -translate-x-1/2">
         <img src={logo} alt="Logo" className="h-25" />
       </div>
 
