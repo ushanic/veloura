@@ -239,20 +239,20 @@ function About() {
             timeless expression through fragrance.
           </div>
           <div className="pt-5 sm:pt-16 md:pt-10">
-                      <button
-                        type="button"
-                        className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base md:px-5 md:py-2.5 md:text-lg font-medium uppercase text-white dark:bg-black"
-                      >
-                        <span>Shop Now</span>
-                        <FaArrowRight className="text-red-600 text-base sm:text-lg md:text-xl" />
-                      </button>
-                    </div>
+            <button
+              type="button"
+              className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base md:px-5 md:py-2.5 md:text-lg font-medium uppercase text-white dark:bg-black"
+            >
+              <span>Shop Now</span>
+              <FaArrowRight className="text-red-600 text-base sm:text-lg md:text-xl" />
+            </button>
+          </div>
         </div>
 
         {/* Cards Section */}
-        <div className="flex flex-row sm:flex-row  gap-6 justify-center lg:justify-between max-w-full lg:max-w-[650px]">
+        <div className="flex flex-wrap gap-6 justify-center lg:justify-between max-w-full lg:max-w-[650px]">
           {/* Card 1 */}
-          <div className="flex flex-col max-w-[200px] w-full">
+          <div className="flex flex-col w-[200px]">
             <div className="grid grid-rows-[auto_70px] border-2 border-black divide-y-2 divide-black">
               <div className="p-2 flex justify-center">
                 <img
@@ -275,7 +275,7 @@ function About() {
           </div>
 
           {/* Card 2 */}
-          <div className="flex flex-col max-w-[200px] w-full">
+          <div className="flex flex-col w-[200px]">
             <div className="grid grid-rows-[auto_70px] border-2 border-black divide-y-2 divide-black">
               <div className="p-2 flex justify-center">
                 <img
@@ -298,7 +298,7 @@ function About() {
           </div>
 
           {/* Card 3 */}
-          <div className="flex flex-col max-w-[200px] w-full">
+          <div className="flex flex-col w-[200px]">
             <div className="grid grid-rows-[auto_70px] border-2 border-black divide-y-2 divide-black">
               <div className="p-2 flex justify-center">
                 <img
