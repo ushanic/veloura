@@ -288,7 +288,7 @@ function About() {
                 <span className="text-xs sm:text-sm md:text-sm lg:text-sm leading-relaxed font-bold uppercase">
                   ACQUA DI GIÒ
                 </span>
-                <div className="flex justify-between items-center mt-2">
+                <div className="flex justify-between items-center">
                   <span className="text-lg sm:text-xl font-bold uppercase">
                     $ 145
                   </span>
