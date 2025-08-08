@@ -1,12 +1,12 @@
 import { useState } from "react";
-import Fragranceimg from "../images/background/fragrances.png";
+import img from "../images/background/Fragrances.png";
 
 function Fragrances() {
   const [filters, setFilters] = useState({
     brand: "",
     gender: "",
-    minPrice: "",
-    maxPrice: "",
+    priceRange: "",
+
   });
   return (
     <div className="flex flex-col pt-10 px-[60px] w-full">
@@ -22,7 +22,7 @@ function Fragrances() {
 
           <div className="h-full w-full bg-black">
             <img
-              src={Fragranceimg}
+              src={img}
               alt="Fragrances"
               className="w-full h-full object-cover"
             />
@@ -31,11 +31,13 @@ function Fragrances() {
       </div>
 
       {/*Filter section*/}
-      <div className="mt-8 p-4 border border-gray-300 rounded-lg bg-gray-50  flex flex-wrap gap-4 items-center">
+      <div className="mt-20 p-4 border border-black w-auto mx-auto flex flex-wrap gap-12 items-center">
         {/* Brand Filter */}
-        <select className=" border border-gray-300 p-2 rounded">
+        <select
+          className=" border border-gray-300 p-2 uppercase font-bold"
           value={filters.brand}
           onChange={(e) => setFilters({ ...filters, brand: e.target.value })}
+        >
           <option value="">All Brands</option>
           <option value="Dior">Dior</option>
           <option value="Burberry">Burberry</option>
@@ -45,19 +47,36 @@ function Fragrances() {
         </select>
 
         {/* Gender Filter */}
-        <select className=" border border-gray-300 p-2 rounded">
+        <select
+          className=" border border-gray-300 p-2 uppercase font-bold"
           value={filters.gender}
           onChange={(e) => setFilters({ ...filters, gender: e.target.value })}
+        >
           <option value="">All Genders</option>
           <option value="Male">Male</option>
           <option value="Female">Female</option>
           <option value="Unisex">Unisex</option>
         </select>
 
-        {/* Price Min*/}
-        
+        {/* Price Range*/}
+        <select
+        className="border border-gray-300 p-2 uppercase font-bold"
+        value={filters.priceRange}
+        onChange={(e) => setFilters({...filters, priceRange: e.target.value })}
+        >
+          <option value="">All Prices</option>
+          <option value="50-100">0$ - 100$</option>
+          <option value="100-200">100$ - 200$</option>
+          <option value="200-300">200$ - 300$</option>
+          <option value="300-400">300$ - 400$</option>
+          <option value="500+">$500+</option>
+        </select>
 
-       
+        {/* Filter Button */}
+        <button
+        className="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 uppercase font-bold"
+        onClick={() => console.log("Filters applied:", filters)}
+        >Apply Filters</button>
       </div>
     </div>
   );
