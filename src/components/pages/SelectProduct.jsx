@@ -77,6 +77,7 @@ function SelectProduct() {
               <FaArrowRight className="text-red-600 text-base sm:text-lg md:text-xl" />
             </button>
           </div>
+          
         </div>
       </div>
     </div>
