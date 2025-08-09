@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import perfume1 from "../images/perfumes/dior/men/Sauvage_EauDeParfum.jpg";
+import perfumeimg2 from "../images/perfumes/dior/perfumeimg2.jpg";
+import perfumeimg3 from "../images/perfumes/dior/perfumeimg3.jpg";
+import perfumeimg4 from "../images/perfumes/dior/perfumeimg4.jpg";
 
 function SelectProduct() {
   const [quantity, setQuantity] = useState(1);
@@ -15,13 +18,37 @@ function SelectProduct() {
   return (
     <div className="flex flex-col pt-10 px-[60px] w-full">
       <div className="flex flex-col lg:flex-row gap-15 sm:px-8 item-start">
-        <div className="flex-1">
+        <div className="flex flex-col gap-5">
           <div className="border-2 p-2">
             <img
               src={perfume1}
               alt=""
               className="w-full h-[400px] object-cover"
             ></img>
+          </div>
+
+          <div className="flex-col flex gap-5 justify-between sm:flex-row">
+            <div className="border-2 w-50 h-50">
+              <img
+                src={perfumeimg2}
+                alt=""
+                className="w-full h-full object-cover"
+              ></img>
+            </div>
+            <div className="border-2 w-50 h-50">
+              <img
+                src={perfumeimg3}
+                alt=""
+                className="w-full h-full object-cover"
+              ></img>
+            </div>
+            <div className="border-2 w-50 h-50">
+              <img
+                src={perfumeimg4}
+                alt=""
+                className="w-full h-full object-cover"
+              ></img>
+            </div>
           </div>
         </div>
 
@@ -77,7 +104,29 @@ function SelectProduct() {
               <FaArrowRight className="text-red-600 text-base sm:text-lg md:text-xl" />
             </button>
           </div>
-          
+
+<div className="w-full border-t-2 border-b-2 border-black mt-20">
+  {/* Row 1 */}
+  <div className="border-b-2 border-black h-10 flex items-center">
+    <span className="font-bold text-md sm:text-sm lg:text-lg md:text-md uppercase">description</span>
+  </div>
+
+  {/* Row 2 */}
+  <div className="border-b-2 border-black h-10 flex items-center">
+    <span className="font-bold text-md sm:text-sm lg:text-lg md:text-md uppercase">key notes</span>
+  </div>
+
+  {/* Row 3 */}
+  <div className="border-b-2 border-black h-10 flex items-center">
+    <span className="font-bold text-md sm:text-sm lg:text-lg md:text-md uppercase">Ingredients</span>
+  </div>
+
+  {/* Row 4 */}
+  <div className="h-10 flex items-center ">
+    <span className="font-bold text-md sm:text-sm lg:text-lg md:text-md uppercase">how to use</span>
+  </div>
+</div>
+
         </div>
       </div>
     </div>
