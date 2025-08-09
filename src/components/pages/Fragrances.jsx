@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import img from "../images/background/Fragrances.png";
-import bg3 from "../images/background/bg3.jpg";
+import perfume1 from "../images/perfumes/dior/men/Sauvage_EauDeParfum.jpg";
 
 function Fragrances() {
   const [filters, setFilters] = useState({
@@ -95,11 +95,11 @@ function Fragrances() {
           <Link to="/SelectProduct" key={idx} className="flex flex-col max-w-[180px] w-full">
             <div className="grid grid-rows-[auto_90px] border-2 border-black divide-y-2 divide-black">
               <div className="p-2 flex justify-center">
-                <img src={bg3} className="w-full h-35 object-cover"></img>
+                <img src={perfume1} className="w-full h-35 object-cover"></img>
               </div>
               <div className="p-2 flex flex-col h-[100px]">
                 <span className="text-xs sm:text-xs md:text-xs lg:text-xs leading-relaxed font-bold uppercase">
-                  ARMANI ROSE D'ARABIE LIMITED EDITION - 100ml
+                  Sauvage Eau de Parfum - 100 ml
                 </span>
                 <div className="flex justify-between items-center mt-2">
                   <div className=" flex justify-start">
@@ -112,7 +112,7 @@ function Fragrances() {
                     </button>
                   </div>
                   <span className="text-sm sm:text-sm font-bold uppercase">
-                    $330
+                    $135
                   </span>
                 </div>
               </div>

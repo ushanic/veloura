@@ -188,8 +188,8 @@ function About() {
         </div>
       </div>
 
+      {/* IMAGE SECTION - LEFT SIDE */}
       <div className="flex flex-col lg:flex-row gap-40 sm:px-8 mt-25 items-start">
-        {/* IMAGE SECTION - LEFT SIDE */}
         <div className="flex-1">
           <div className="border-2 p-2">
             <img
@@ -202,7 +202,7 @@ function About() {
 
         {/* TEXT SECTION - RIGHT SIDE */}
         <div className="flex flex-col flex-1">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold uppercase">
+          <h2 className="text-3xl sm:text-xl md:text-5xl font-bold uppercase">
             What We Offer
           </h2>
           <div className="mt-2 h-0.5 w-full bg-gray-300" />
