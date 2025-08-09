@@ -15,6 +15,12 @@ function SelectProduct() {
     setQuantity(quantity + 1);
   };
 
+  const [openSection, setOpenSection] = useState(null);
+
+  const toggleSection = (section) => {
+    setOpenSection(openSection === section ? null : section);
+  };
+
   return (
     <div className="flex flex-col pt-10 px-[60px] w-full">
       <div className="flex flex-col lg:flex-row gap-15 sm:px-8 item-start">
@@ -105,28 +111,48 @@ function SelectProduct() {
             </button>
           </div>
 
-<div className="w-full border-t-2 border-b-2 border-black mt-20">
-  {/* Row 1 */}
-  <div className="border-b-2 border-black h-10 flex items-center">
-    <span className="font-bold text-md sm:text-sm lg:text-lg md:text-md uppercase">description</span>
-  </div>
+          <div className="w-full border-t-2 border-b-2 border-black mt-20">
+            {/* description */}
+            <div>
+              <div
+                className="border-b-2 border-black h-10 flex items-center"
+                onClick={() => toggleSection("description")}
+              >
+                <span className="font-bold text-md sm:text-sm lg:text-lg md:text-md uppercase">
+                  description
+                </span>
+              </div>
+              {openSection === "description" && (
+                <div className=" py-3 text-justify text-md sm:text-sm lg:text-lg md:text-md">
+                  Inspiration for the creation of Sauvage Eau de Parfum was
+                  taken from the desert in the magical hour of twilight: mixed
+                  with the coolness of the night, the burning desert air exudes
+                  profound scents.{" "}
+                </div>
+              )}
+            </div>
 
-  {/* Row 2 */}
-  <div className="border-b-2 border-black h-10 flex items-center">
-    <span className="font-bold text-md sm:text-sm lg:text-lg md:text-md uppercase">key notes</span>
-  </div>
+            {/* Row 2 */}
+            <div className="border-b-2 border-black h-10 flex items-center">
+              <span className="font-bold text-md sm:text-sm lg:text-lg md:text-md uppercase">
+                key notes
+              </span>
+            </div>
 
-  {/* Row 3 */}
-  <div className="border-b-2 border-black h-10 flex items-center">
-    <span className="font-bold text-md sm:text-sm lg:text-lg md:text-md uppercase">Ingredients</span>
-  </div>
+            {/* Row 3 */}
+            <div className="border-b-2 border-black h-10 flex items-center">
+              <span className="font-bold text-md sm:text-sm lg:text-lg md:text-md uppercase">
+                Ingredients
+              </span>
+            </div>
 
-  {/* Row 4 */}
-  <div className="h-10 flex items-center ">
-    <span className="font-bold text-md sm:text-sm lg:text-lg md:text-md uppercase">how to use</span>
-  </div>
-</div>
-
+            {/* Row 4 */}
+            <div className="h-10 flex items-center ">
+              <span className="font-bold text-md sm:text-sm lg:text-lg md:text-md uppercase">
+                how to use
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
