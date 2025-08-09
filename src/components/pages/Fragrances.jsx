@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import img from "../images/background/Fragrances.png";
 import bg3 from "../images/background/bg3.jpg";
 
@@ -91,7 +92,7 @@ function Fragrances() {
         style={{ gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))" }}
       >
         {items.map((_, idx) => (
-          <div key={idx} className="flex flex-col max-w-[180px] w-full">
+          <Link to="/SelectProduct" key={idx} className="flex flex-col max-w-[180px] w-full">
             <div className="grid grid-rows-[auto_90px] border-2 border-black divide-y-2 divide-black">
               <div className="p-2 flex justify-center">
                 <img src={bg3} className="w-full h-35 object-cover"></img>
@@ -116,7 +117,7 @@ function Fragrances() {
                 </div>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
         
       </div>
