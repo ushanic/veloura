@@ -160,10 +160,13 @@ function SelectProduct() {
         
       </div>
       <div className="flex flex-col mt-25 items-center">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold uppercase">
-          related products
-        </h2>
-        <div className=" h-0.5 w-117 bg-gray-300" />
+         <div className="inline-block">
+  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold uppercase">
+    related products
+  </h2>
+  <div className="h-0.5 w-full bg-gray-300" />
+</div>
+
 
          <div className="flex flex-col sm:flex-row flex-wrap gap-12 justify-center lg:justify-between max-w-full lg:max-w-[650px] mt-10 ">
                   {/* Card 1 */}
