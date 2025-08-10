@@ -159,16 +159,16 @@ function SelectProduct() {
         </div>
         
       </div>
-      <div className="flex flex-col mt-25 ">
+      <div className="flex flex-col mt-25 items-center">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold uppercase">
           related products
         </h2>
-        <div className=" h-0.5 w-1/4 bg-gray-300" />
+        <div className=" h-0.5 w-117 bg-gray-300" />
 
-         <div className="flex flex-col sm:flex-row flex-wrap gap-2 justify-center lg:justify-between max-w-full lg:max-w-[650px] mt-10">
+         <div className="flex flex-col sm:flex-row flex-wrap gap-12 justify-center lg:justify-between max-w-full lg:max-w-[650px] mt-10 ">
                   {/* Card 1 */}
                   <div className="flex flex-col max-w-[180px] w-full">
-                    <div className="grid grid-rows-[auto_80px] border-2 border-black divide-y-2 divide-black">
+                    <div className="grid grid-rows-[auto_90px] border-2 border-black divide-y-2 divide-black">
                       <div className="p-2 flex justify-center">
                         <img src={bg3} alt="" className="w-full h-30 object-cover" />
                       </div>
@@ -176,23 +176,26 @@ function SelectProduct() {
                         <span className="text-xs sm:text-xs md:text-xs lg:text-xs leading-relaxed font-bold uppercase">
                           ARMANI ROSE D'ARABIE LIMITED EDITION - 100ml
                         </span>
-                        <div className="flex justify-between items-center">
-                          <span className="text-md sm:text-md font-bold uppercase">
+                        <div className="flex justify-between items-center mt-2">
+                          <span className="text-lg sm:text-lg font-bold uppercase">
                             $330
                           </span>
-                          <button
-                            type="button"
-                            className="flex items-center gap-2 rounded-md px-2 py-0.5 text-sm dark:bg-black"
-                          >
-                            <FaArrowRight className="text-red-600 text-sm" />
-                          </button>
+                          <div className=" flex justify-start">
+                    <button
+                      type="button"
+                      className="flex items-center gap-1 rounded px-1.5 py-1.5 text-[10px] font-medium uppercase text-white dark:bg-black"
+                    >
+                      <span>Add to cart</span>
+                      <FaArrowRight className="text-red-600 text-xs" />
+                    </button>
+                  </div>
                         </div>
                       </div>
                     </div>
                   </div>
 
                   <div className="flex flex-col max-w-[180px] w-full">
-                    <div className="grid grid-rows-[auto_80px] border-2 border-black divide-y-2 divide-black">
+                    <div className="grid grid-rows-[auto_90px] border-2 border-black divide-y-2 divide-black">
                       <div className="p-2 flex justify-center">
                         <img src={bg3} alt="" className="w-full h-30 object-cover" />
                       </div>
@@ -200,23 +203,26 @@ function SelectProduct() {
                         <span className="text-xs sm:text-xs md:text-xs lg:text-xs leading-relaxed font-bold uppercase">
                           ARMANI ROSE D'ARABIE LIMITED EDITION - 100ml
                         </span>
-                        <div className="flex justify-between items-center">
-                          <span className="text-md sm:text-md font-bold uppercase">
+                        <div className="flex justify-between items-center mt-2">
+                          <span className="text-lg sm:text-lg font-bold uppercase">
                             $330
                           </span>
-                          <button
-                            type="button"
-                            className="flex items-center gap-2 rounded-md px-2 py-0.5 text-sm dark:bg-black"
-                          >
-                            <FaArrowRight className="text-red-600 text-sm" />
-                          </button>
+                          <div className=" flex justify-start">
+                    <button
+                      type="button"
+                      className="flex items-center gap-1 rounded px-1.5 py-1.5 text-[10px] font-medium uppercase text-white dark:bg-black"
+                    >
+                      <span>Add to cart</span>
+                      <FaArrowRight className="text-red-600 text-xs" />
+                    </button>
+                  </div>
                         </div>
                       </div>
                     </div>
                   </div>
 
                   <div className="flex flex-col max-w-[180px] w-full">
-                    <div className="grid grid-rows-[auto_80px] border-2 border-black divide-y-2 divide-black">
+                    <div className="grid grid-rows-[auto_90px] border-2 border-black divide-y-2 divide-black">
                       <div className="p-2 flex justify-center">
                         <img src={bg3} alt="" className="w-full h-30 object-cover" />
                       </div>
@@ -224,16 +230,19 @@ function SelectProduct() {
                         <span className="text-xs sm:text-xs md:text-xs lg:text-xs leading-relaxed font-bold uppercase">
                           ARMANI ROSE D'ARABIE LIMITED EDITION - 100ml
                         </span>
-                        <div className="flex justify-between items-center">
-                          <span className="text-md sm:text-md font-bold uppercase">
+                        <div className="flex justify-between items-center mt-2">
+                          <span className="text-lg sm:text-lg font-bold uppercase">
                             $330
                           </span>
-                          <button
-                            type="button"
-                            className="flex items-center gap-2 rounded-md px-2 py-0.5 text-sm dark:bg-black"
-                          >
-                            <FaArrowRight className="text-red-600 text-sm" />
-                          </button>
+                          <div className=" flex justify-start">
+                    <button
+                      type="button"
+                      className="flex items-center gap-1 rounded px-1.5 py-1.5 text-[10px] font-medium uppercase text-white dark:bg-black"
+                    >
+                      <span>Add to cart</span>
+                      <FaArrowRight className="text-red-600 text-xs" />
+                    </button>
+                  </div>
                         </div>
                       </div>
                     </div>
