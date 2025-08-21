@@ -7,6 +7,7 @@ import Contact from "./components/pages/Contact";
 import Fragrances from "./components/pages/Fragrances";
 import Home from "./components/pages/Home";
 import SelectProduct from "./components/pages/SelectProduct";
+import SignIn from "./components/pages/SignIn";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/Fragrances" element={<Fragrances />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/SelectProduct" element={<SelectProduct />} />
+          <Route path="/SignIn" element={<SignIn />} />
         </Routes>
         <Footer />
       </Router>

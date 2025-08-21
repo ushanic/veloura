@@ -32,9 +32,9 @@ function NavBar() {
           <button title="Cart">
             <FiShoppingCart />
           </button>
-          <button title="Profile">
+          <Link to="/SignIn" title="Profile">
             <FiUser />
-          </button>
+          </Link>
         </div>
       </div>
       <div className="absolute left-1/2 transform -translate-x-1/2">
