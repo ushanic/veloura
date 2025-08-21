@@ -1,4 +1,4 @@
-import { FaEnvelope, FaPhone } from "react-icons/fa";
+import { FaArrowRight, FaEnvelope, FaPhone } from "react-icons/fa";
 
 function Contact() {
   return (
@@ -74,12 +74,25 @@ function Contact() {
             />
           </div>
           <div class="mb-4">
-            
-
-  <label for="message" class="block mb-2 text-sm font-medium text-black"></label>
-  <textarea id="message" rows="4" class="border border-black text-black text-md uppercase font-bold block w-full p-2.5  dark:border-black dark:placeholder-black" placeholder="your message"></textarea>
-
-
+            <label
+              for="message"
+              class="block mb-2 text-sm font-medium text-black"
+            ></label>
+            <textarea
+              id="message"
+              rows="4"
+              class="border border-black text-black text-md uppercase font-bold block w-full p-2.5  dark:border-black dark:placeholder-black"
+              placeholder="your message"
+            ></textarea>
+          </div>
+          <div className="pt-5 sm:pt-16 md:pt-10">
+            <button
+              type="button"
+              className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base md:px-5 md:py-2.5 md:text-lg font-medium uppercase text-white dark:bg-black"
+            >
+              <span>send message</span>
+              <FaArrowRight className="text-red-600 text-base sm:text-lg md:text-xl" />
+            </button>
           </div>
         </form>
       </div>
