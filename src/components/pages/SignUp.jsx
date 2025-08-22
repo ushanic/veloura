@@ -1,9 +1,9 @@
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import logo from "../images/logo/logo.png";
-import signin from "../images/signin.jpg";
+import signup from "../images/signup.jpg";
 
-function SignIn() {
+function SignUp() {
   return (
     <div className="flex flex-col w-full mt-10 px-[60px]">
       <div className="sm:px-6 md:px-10 lg:px-[60px]">
@@ -11,9 +11,9 @@ function SignIn() {
           {/* Left - Image */}
           <div className="w-full">
             <img
-              src={signin}
-              alt="Sign In"
-              className="w-full h-full object-cover max-h-[650px] filter grayscale"
+              src={signup}
+              alt="Sign Up"
+              className="w-full max-h-[780px] object-cover mx-auto filter grayscale"
             />
           </div>
 
@@ -25,17 +25,32 @@ function SignIn() {
 
             <div className="flex flex-col items-center">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold uppercase">
-                Welcome Back!
+                Welcome!
               </h2>
 
               <p className="mt-4 text-justify text-sm sm:text-base md:text-lg leading-relaxed font-bold">
-                Sign in to continue exploring timeless scents, curated for your
-                unique style and story.
+                Create Your Account And Begin Your Journey With Timeless Scents.
               </p>
             </div>
 
             <form className="max-w-full flex flex-col flex-1 mt-7 gap-4">
-              
+              <div>
+                <label
+                  htmlFor="name"
+                  className="block mb-2 text-black text-md uppercase font-bold"
+                >
+                  Full Name
+                </label>
+                <input
+                  type="name"
+                  name="name"
+                  id="name"
+                  className="border border-black text-black focus:ring-primary-600 block w-full p-2.5 dark:border-black dark:placeholder-gray-400"
+                  placeholder="Enter your full name"
+                  required
+                />
+              </div>
+
               <div>
                 <label
                   htmlFor="email"
@@ -65,11 +80,27 @@ function SignIn() {
                   name="password"
                   id="password"
                   className="border border-black text-black focus:ring-primary-600 block w-full p-2.5 dark:border-black dark:placeholder-gray-400"
-                  placeholder="••••••••"
+                  placeholder=" "
                   required
                 />
               </div>
 
+<div>
+                <label
+                  htmlFor="password"
+                  className="block mb-2 text-black text-md uppercase font-bold"
+                >
+                  Confirm Password
+                </label>
+                <input
+                  type="password"
+                  name="confirm_password"
+                  id="confirm_password"
+                  className="border border-black text-black focus:ring-primary-600 block w-full p-2.5 dark:border-black dark:placeholder-gray-400"
+                  placeholder=" "
+                  required
+                />
+              </div>
               <div className="flex items-center justify-between">
                 <div className="flex items-start">
                   <div className="flex items-center h-5">
@@ -86,16 +117,11 @@ function SignIn() {
                       htmlFor="remember"
                       className="text-black font-bold dark:text-black"
                     >
-                      Remember me
+                      I agree to the Terms and Conditions & Privacy Policy
                     </label>
                   </div>
                 </div>
-                <a
-                  href="#"
-                  className="text-sm font-bold text-primary-600 hover:underline dark:text-primary-500"
-                >
-                  Forgot password?
-                </a>
+                
               </div>
 
               <div className="pt-5 sm:pt-16 md:pt-10 flex justify-center">
@@ -103,18 +129,18 @@ function SignIn() {
                             type="button"
                             className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base md:px-5 md:py-2.5 md:text-lg font-medium uppercase text-white dark:bg-black"
                           >
-                            <span>sign in</span>
+                            <span>sign up</span>
                             <FaArrowRight className="text-red-600 text-base sm:text-lg md:text-xl" />
                           </button>
                         </div>
 
               <p className="text-sm text-black dark:text-black font-bold">
-                Don’t have an account yet?{" "}
+                already have an account?{" "}
                 <Link
-                  to="/SignUp"
+                  to="/SignIn"
                   className="font-bold text-primary-600 hover:underline dark:text-primary-500"
                 >
-                  Sign up
+                  Sign In
                 </Link>
               </p>
             </form>
@@ -125,4 +151,4 @@ function SignIn() {
   );
 }
 
-export default SignIn;
+export default SignUp;
