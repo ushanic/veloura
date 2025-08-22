@@ -29,9 +29,9 @@ function NavBar() {
           <button title="Search">
             <FiSearch />
           </button>
-          <button title="Cart">
+          <Link to ="/Cart" title="My Cart">
             <FiShoppingCart />
-          </button>
+          </Link>
           <Link to="/SignIn" title="Profile">
             <FiUser />
           </Link>
