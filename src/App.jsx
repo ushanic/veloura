@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import NavBar from "./components/Navbar";
 import About from "./components/pages/About";
 import Cart from "./components/pages/Cart";
+import Checkout from "./components/pages/Checkout";
 import Contact from "./components/pages/Contact";
 import Fragrances from "./components/pages/Fragrances";
 import Home from "./components/pages/Home";
@@ -25,6 +26,7 @@ function App() {
           <Route path="/SignIn" element={<SignIn />} />
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/Checkout" element={<Checkout />} />
         </Routes>
         <Footer />
       </Router>
