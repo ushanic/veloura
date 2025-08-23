@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 import perfume1 from "../images/perfumes/dior/men/Sauvage_EauDeParfum.jpg";
 
 function Cart() {
@@ -209,13 +210,13 @@ function Cart() {
         </button>
 
         {/* Checkout - right */}
-        <button
-          type="button"
+        <Link
+          to="/Checkout"
           className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base md:px-5 md:py-2.5 md:text-lg font-medium uppercase text-white dark:bg-black"
         >
           <span>checkout</span>
           <FaArrowRight className="text-red-600 text-base sm:text-lg md:text-xl" />
-        </button>
+        </Link>
       </div>
     </div>
   );
