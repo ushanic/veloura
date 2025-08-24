@@ -12,6 +12,7 @@ import Payment from "./components/pages/Payment";
 import SelectProduct from "./components/pages/SelectProduct";
 import SignIn from "./components/pages/SignIn";
 import SignUp from "./components/pages/SignUp";
+import Thank from "./components/pages/Thank";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/Checkout" element={<Checkout />} />
           <Route path="/Payment" element={<Payment />} />
+          <Route path="/Thank" element={<Thank />} />
         </Routes>
         <Footer />
       </Router>
