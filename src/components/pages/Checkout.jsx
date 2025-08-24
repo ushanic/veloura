@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import perfume1 from "../images/perfumes/dior/men/Sauvage_EauDeParfum.jpg";
 
 function Checkout() {
@@ -298,10 +299,12 @@ function Checkout() {
 
             {/* Continue Button */}
             <div className="pt-5 sm:pt-8 flex justify-center">
-              <button className="flex items-center gap-2 rounded-lg px-4 py-2 sm:px-5 sm:py-2 md:px-6 md:py-2.5 md:text-lg font-medium uppercase text-white bg-black">
-                <span>Continue</span>
+              <Link
+              to="/Payment"
+              className="flex items-center gap-2 rounded-lg px-4 py-2 sm:px-5 sm:py-2 md:px-6 md:py-2.5 md:text-lg font-medium uppercase text-white bg-black">
+                <span>paynow</span>
                 <FaArrowRight className="text-red-600 text-base sm:text-lg md:text-xl" />
-              </button>
+              </Link>
             </div>
             <span className="mt-5 capitalize text-sm text-center lg:text-left">
               Need help? Call us at +1 (212) 555-0182
