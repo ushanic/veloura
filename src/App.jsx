@@ -8,6 +8,7 @@ import Checkout from "./components/pages/Checkout";
 import Contact from "./components/pages/Contact";
 import Fragrances from "./components/pages/Fragrances";
 import Home from "./components/pages/Home";
+import Payment from "./components/pages/Payment";
 import SelectProduct from "./components/pages/SelectProduct";
 import SignIn from "./components/pages/SignIn";
 import SignUp from "./components/pages/SignUp";
@@ -27,6 +28,7 @@ function App() {
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/Checkout" element={<Checkout />} />
+          <Route path="/Payment" element={<Payment />} />
         </Routes>
         <Footer />
       </Router>
