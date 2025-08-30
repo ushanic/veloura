@@ -1,9 +1,24 @@
+import axios from 'axios';
+import { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import logo from "../images/logo/logo.png";
 import signup from "../images/signup.jpg";
 
 function SignUp() {
+
+  const [name, setName] = useState()
+const [email, setEmail] = useState()
+const [password, setPassword] = useState()
+
+const handleSubmit = (e) => {
+  e.preventDefault()
+  axios.post('', {name, email, password})
+  .then(result=>console.log(result))
+  .catch(err=>console.log(err))
+}
+
+
   return (
     <div className="flex flex-col w-full mt-10 px-[60px]">
       <div className="sm:px-6 md:px-10 lg:px-[60px]">
@@ -13,7 +28,7 @@ function SignUp() {
             <img
               src={signup}
               alt="Sign Up"
-              className="w-full max-h-[780px] object-cover mx-auto filter grayscale"
+              className="w-full max-h-[690px] object-cover mx-auto filter grayscale"
             />
           </div>
 
@@ -33,7 +48,7 @@ function SignUp() {
               </p>
             </div>
 
-            <form className="max-w-full flex flex-col flex-1 mt-7 gap-4">
+            <form onSubmit={handleSubmit} className="max-w-full flex flex-col flex-1 mt-7 gap-4">
               <div>
                 <label
                   htmlFor="name"
@@ -48,6 +63,7 @@ function SignUp() {
                   className="border border-black text-black focus:ring-primary-600 block w-full p-2.5 dark:border-black dark:placeholder-gray-400"
                   placeholder="Enter your full name"
                   required
+                  onChange={(e) => setName(e.target.value)}
                 />
               </div>
 
@@ -65,6 +81,7 @@ function SignUp() {
                   className="border border-black text-black focus:ring-primary-600 block w-full p-2.5 dark:border-black dark:placeholder-gray-400"
                   placeholder="Enter your email"
                   required
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
 
@@ -82,25 +99,10 @@ function SignUp() {
                   className="border border-black text-black focus:ring-primary-600 block w-full p-2.5 dark:border-black dark:placeholder-gray-400"
                   placeholder=" "
                   required
+                  onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
 
-<div>
-                <label
-                  htmlFor="password"
-                  className="block mb-2 text-black text-md uppercase font-bold"
-                >
-                  Confirm Password
-                </label>
-                <input
-                  type="password"
-                  name="confirm_password"
-                  id="confirm_password"
-                  className="border border-black text-black focus:ring-primary-600 block w-full p-2.5 dark:border-black dark:placeholder-gray-400"
-                  placeholder=" "
-                  required
-                />
-              </div>
               <div className="flex items-center justify-between">
                 <div className="flex items-start">
                   <div className="flex items-center h-5">
