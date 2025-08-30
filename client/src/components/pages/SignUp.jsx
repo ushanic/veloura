@@ -1,23 +1,26 @@
-import axios from 'axios';
+import axios from "axios";
 import { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../images/logo/logo.png";
 import signup from "../images/signup.jpg";
 
 function SignUp() {
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  const navigate = useNavigate()
 
-  const [name, setName] = useState()
-const [email, setEmail] = useState()
-const [password, setPassword] = useState()
-
-const handleSubmit = (e) => {
-  e.preventDefault()
-  axios.post('', {name, email, password})
-  .then(result=>console.log(result))
-  .catch(err=>console.log(err))
-}
-
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios
+      .post('http://127.0.0.1:3001/register', { name, email, password })
+      .then((result) => {
+        console.log(result)
+        navigate('/SignIn')
+      })
+      .catch((err) => console.log(err));
+  };
 
   return (
     <div className="flex flex-col w-full mt-10 px-[60px]">
@@ -48,7 +51,10 @@ const handleSubmit = (e) => {
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="max-w-full flex flex-col flex-1 mt-7 gap-4">
+            <form
+              onSubmit={handleSubmit}
+              className="max-w-full flex flex-col flex-1 mt-7 gap-4"
+            >
               <div>
                 <label
                   htmlFor="name"
@@ -123,18 +129,17 @@ const handleSubmit = (e) => {
                     </label>
                   </div>
                 </div>
-                
               </div>
 
               <div className="pt-5 sm:pt-16 md:pt-10 flex justify-center">
-                          <button
-                            type="button"
-                            className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base md:px-5 md:py-2.5 md:text-lg font-medium uppercase text-white dark:bg-black"
-                          >
-                            <span>sign up</span>
-                            <FaArrowRight className="text-red-600 text-base sm:text-lg md:text-xl" />
-                          </button>
-                        </div>
+                <button
+                  type='submit'
+                  className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base md:px-5 md:py-2.5 md:text-lg font-medium uppercase text-white dark:bg-black"
+                >
+                  sign up
+                  <FaArrowRight className="text-red-600 text-base sm:text-lg md:text-xl" />
+                </button>
+              </div>
 
               <p className="text-sm text-black dark:text-black font-bold">
                 already have an account?{" "}
