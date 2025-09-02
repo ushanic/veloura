@@ -2,6 +2,7 @@ const express = require("express")
 const mongoose = require("mongoose")
 const cors = require("cors")
 const EmployeeModel = require("./models/employees.js")
+const PerfumeModel = require("./models/Perfume.js")
 
 const app = express()
 app.use(express.json())
@@ -31,6 +32,16 @@ app.post('/register',(req,res)=>{
     .then(employee=>res.json(employee))
     .catch(err=>res.json(err))
 })
+
+
+app.get('/perfumes', async(req,res)=>{
+  try{
+    const perfumes = await PerfumeModel.find();
+    res.json(perfumes);
+  }catch(err){
+    res.status(500).json({error:err.message});
+  }
+});
 
 app.listen(3001,()=>{
     console.log("server s runing")
