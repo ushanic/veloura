@@ -120,10 +120,11 @@ function Fragrances() {
         className="grid gap-6 px-6 max-w-full mt-20"
         style={{ gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))" }}
       >
-        {filteredPerfumes.slice(0, visibleCount).map((p, idx) => (
+        {filteredPerfumes.slice(0, visibleCount).map((p) => (
           <Link
-            key={idx}
+            key={p._id}
             to="/SelectProduct"
+            state={{ perfume: p }}
             className="flex flex-col max-w-[180px] w-full"
           >
             <div className="grid grid-rows-[auto_90px] border-2 border-black divide-y-2 divide-black">
