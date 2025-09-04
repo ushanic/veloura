@@ -63,6 +63,38 @@ app.post("/cart/add", async (req, res) => {
   }
 });
 
+//Get all cart items for a user
+app.get('/cart/:userId', async (req, res)=> {
+  try {
+    const cartItems = await CartModel.find({ userId: req.params.userId });
+    res.json(cartItems);
+  }catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+
+//update quntity
+app.put('/cart/update/:cartId', async (req, res)=> {
+  try {
+    const { quantity } = req.body;
+    const updateItem = await CartModel.findByIdAndUpdate(req.params.cartId, { quantity }, { new: true});
+    res.json(updateItem);
+  }catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+
+// Remove item from cart
+app.delete("/cart/remove/:cartId", async (req, res) => {
+  try {
+    await CartModel.findByIdAndDelete(req.params.cartId);
+    res.json({ message: "Item removed from cart" });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
 
 
 app.listen(3001,()=>{
