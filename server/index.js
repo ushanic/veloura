@@ -3,48 +3,49 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const EmployeeModel = require("./models/employees.js");
 const PerfumeModel = require("./models/Perfume.js");
-const CartModel = require("./models/Cart.js");
+const CartModel = require("./models/Cart.js"); // new Cart model
 
-const app = express()
-app.use(express.json())
-app.use(cors())
+const app = express();
+app.use(express.json());
+app.use(cors());
 
-mongoose.connect('mongodb://127.0.0.1:27017/employee1')
+mongoose.connect("mongodb://127.0.0.1:27017/employee1");
 
-app.post('/login',(req,res)=>{
-    const {email,password} = req.body
-    EmployeeModel.findOne({email:email})
-    .then(user=>{
-        if(user){
-            if(user.password === password){
-                res.json("Success")
-        }else{
-            res.json("password is incorrect")
-        }
-    }else{
-        res.json("user doesn't exists")
-
+// ===== AUTH ROUTES =====
+app.post("/login", (req, res) => {
+  const { email, password } = req.body;
+  EmployeeModel.findOne({ email: email }).then((user) => {
+    if (user) {
+      if (user.password === password) {
+        res.json({ message: "Success", userId: user._id });
+      } else {
+        res.json({ message: "Password is incorrect" });
+      }
+    } else {
+      res.json({ message: "User doesn't exist" });
     }
-    })
-})
+  });
+});
 
-app.post('/register',(req,res)=>{
-    EmployeeModel.create(req.body)
-    .then(employee=>res.json(employee))
-    .catch(err=>res.json(err))
-})
+app.post("/register", (req, res) => {
+  EmployeeModel.create(req.body)
+    .then((employee) => res.json(employee))
+    .catch((err) => res.json(err));
+});
 
-
-app.get('/perfumes', async(req,res)=>{
-  try{
+// ===== PERFUMES ROUTE =====
+app.get("/perfumes", async (req, res) => {
+  try {
     const perfumes = await PerfumeModel.find();
     res.json(perfumes);
-  }catch(err){
-    res.status(500).json({error:err.message});
+  } catch (err) {
+    res.status(500).json({ error: err.message });
   }
 });
 
-//Add to cart
+// ===== CART ROUTES =====
+
+// Add item to cart
 app.post("/cart/add", async (req, res) => {
   try {
     const { userId, perfumeId, name, price, size, quantity, imageUrl } = req.body;
@@ -63,28 +64,26 @@ app.post("/cart/add", async (req, res) => {
   }
 });
 
-//Get all cart items for a user
-app.get('/cart/:userId', async (req, res)=> {
+// Get all cart items for a user
+app.get("/cart/:userId", async (req, res) => {
   try {
     const cartItems = await CartModel.find({ userId: req.params.userId });
     res.json(cartItems);
-  }catch (err) {
+  } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
 
-
-//update quntity
-app.put('/cart/update/:cartId', async (req, res)=> {
+// Update quantity of a cart item
+app.put("/cart/update/:cartId", async (req, res) => {
   try {
     const { quantity } = req.body;
-    const updateItem = await CartModel.findByIdAndUpdate(req.params.cartId, { quantity }, { new: true});
-    res.json(updateItem);
-  }catch (err) {
+    const updatedItem = await CartModel.findByIdAndUpdate(req.params.cartId, { quantity }, { new: true });
+    res.json(updatedItem);
+  } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
-
 
 // Remove item from cart
 app.delete("/cart/remove/:cartId", async (req, res) => {
@@ -96,7 +95,7 @@ app.delete("/cart/remove/:cartId", async (req, res) => {
   }
 });
 
-
-app.listen(3001,()=>{
-    console.log("server s runing")
-})
+// ===== START SERVER =====
+app.listen(3001, () => {
+  console.log("Server is running on port 3001");
+});
