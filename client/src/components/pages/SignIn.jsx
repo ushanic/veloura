@@ -6,26 +6,29 @@ import logo from "../images/logo/logo.png";
 import signin from "../images/signin.jpg";
 
 function SignIn() {
-
-
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
-  const navigate = useNavigate()
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post('http://127.0.0.1:3001/login', {email, password })
+      .post("http://127.0.0.1:3001/login", { email, password })
       .then((result) => {
-        console.log(result)
-        if(result.data ==="Success"){
-navigate('/')
-        }
-        
-      })
-      .catch((err) => console.log(err));
-  };
+        console.log("Login response:", result.data);
 
+        if (result.data.message === "Success") {
+          // Save userId to localStorage for later (cart, etc.)
+          localStorage.setItem("userId", result.data.userId);
+
+          // Redirect to home
+          navigate("/");
+        } else {
+          alert(result.data.message); // show error if password wrong or user doesn't exist
+        }
+      })
+      .catch((err) => console.error("Login error:", err));
+  };
 
   return (
     <div className="flex flex-col w-full mt-10 px-[60px]">
@@ -57,9 +60,10 @@ navigate('/')
               </p>
             </div>
 
-            <form onSubmit={handleSubmit}
-            className="max-w-full flex flex-col flex-1 mt-7 gap-4">
-              
+            <form
+              onSubmit={handleSubmit}
+              className="max-w-full flex flex-col flex-1 mt-7 gap-4"
+            >
               <div>
                 <label
                   htmlFor="email"
@@ -71,7 +75,7 @@ navigate('/')
                   type="email"
                   name="email"
                   id="email"
-                  className="border border-black text-black focus:ring-primary-600 block w-full p-2.5 dark:border-black dark:placeholder-gray-400"
+                  className="border border-black text-black focus:ring-primary-600 block w-full p-2.5"
                   placeholder="Enter your email"
                   required
                   onChange={(e) => setEmail(e.target.value)}
@@ -89,7 +93,7 @@ navigate('/')
                   type="password"
                   name="password"
                   id="password"
-                  className="border border-black text-black focus:ring-primary-600 block w-full p-2.5 dark:border-black dark:placeholder-gray-400"
+                  className="border border-black text-black focus:ring-primary-600 block w-full p-2.5"
                   placeholder="••••••••"
                   required
                   onChange={(e) => setPassword(e.target.value)}
@@ -101,16 +105,14 @@ navigate('/')
                   <div className="flex items-center h-5">
                     <input
                       id="remember"
-                      aria-describedby="remember"
                       type="checkbox"
-                      className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
-                      required
+                      className="w-4 h-4 border border-gray-300 rounded bg-gray-50"
                     />
                   </div>
                   <div className="ml-3 text-sm">
                     <label
                       htmlFor="remember"
-                      className="text-black font-bold dark:text-black"
+                      className="text-black font-bold"
                     >
                       Remember me
                     </label>
@@ -118,27 +120,27 @@ navigate('/')
                 </div>
                 <a
                   href="#"
-                  className="text-sm font-bold text-primary-600 hover:underline dark:text-primary-500"
+                  className="text-sm font-bold text-primary-600 hover:underline"
                 >
                   Forgot password?
                 </a>
               </div>
 
               <div className="pt-5 sm:pt-16 md:pt-10 flex justify-center">
-                          <button
-                            type="submit"
-                            className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base md:px-5 md:py-2.5 md:text-lg font-medium uppercase text-white dark:bg-black"
-                          >
-                            <span>sign in</span>
-                            <FaArrowRight className="text-red-600 text-base sm:text-lg md:text-xl" />
-                          </button>
-                        </div>
+                <button
+                  type="submit"
+                  className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base md:px-5 md:py-2.5 md:text-lg font-medium uppercase text-white dark:bg-black"
+                >
+                  <span>sign in</span>
+                  <FaArrowRight className="text-red-600 text-base sm:text-lg md:text-xl" />
+                </button>
+              </div>
 
-              <p className="text-sm text-black dark:text-black font-bold">
+              <p className="text-sm text-black font-bold">
                 Don’t have an account yet?{" "}
                 <Link
                   to="/SignUp"
-                  className="font-bold text-primary-600 hover:underline dark:text-primary-500"
+                  className="font-bold text-primary-600 hover:underline"
                 >
                   Sign up
                 </Link>
