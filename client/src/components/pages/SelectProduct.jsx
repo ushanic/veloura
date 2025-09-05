@@ -1,14 +1,15 @@
 import { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function SelectProduct() {
   const { state } = useLocation();
   const perfume = state?.perfume;
   const [quantity, setQuantity] = useState(1);
+  const [size, setSize] = useState("50ml"); 
+  const navigate = useNavigate();
 
   if (!perfume) return <div className="text-center mt-20">No product selected</div>;
-
 
   const decreaseQuantity = () => {
     if (quantity > 1) setQuantity(quantity - 1);
@@ -16,6 +17,41 @@ function SelectProduct() {
 
   const increaseQuantity = () => {
     setQuantity(quantity + 1);
+  };
+
+  // handle add to cart
+  const handleAddToCart = async () => {
+    try {
+      const userId = localStorage.getItem("userId"); 
+      if (!userId) {
+        alert("Please login to add items to cart");
+        return;
+      }
+
+      const response = await fetch("http://localhost:3001/cart/add", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          userId,
+          perfumeId: perfume._id,
+          name: perfume.name,
+          price: perfume.price,
+          size,
+          quantity,
+          imageUrl: perfume.imageUrl,
+        }),
+      });
+
+      const data = await response.json();
+      console.log("Added to cart:", data);
+
+
+      navigate("/cart");
+
+    } catch (err) {
+      console.error("Error adding to cart:", err);
+      alert("Something went wrong!");
+    }
   };
 
   return (
@@ -29,8 +65,6 @@ function SelectProduct() {
               className="w-full h-[400px] object-cover"
             />
           </div>
-
-          
         </div>
 
         {/* Perfume details */}
@@ -48,16 +82,26 @@ function SelectProduct() {
               Select Size
             </span>
             <div className="flex gap-4 pt-5">
-              <button className="px-4 py-1 border-2 border-black text-black transparent-rounded hover:bg-gray-100 font-bold">
+              <button
+                onClick={() => setSize("50ml")}
+                className={`px-4 py-1 border-2 border-black font-bold ${
+                  size === "50ml" ? "bg-gray-200" : ""
+                }`}
+              >
                 50ml
               </button>
-              <button className="px-4 py-1 border-2 border-black text-black transparent-rounded hover:bg-gray-100 font-bold">
+              <button
+                onClick={() => setSize("100ml")}
+                className={`px-4 py-1 border-2 border-black font-bold ${
+                  size === "100ml" ? "bg-gray-200" : ""
+                }`}
+              >
                 100ml
               </button>
             </div>
           </div>
 
-{/* Quantity & Add to Cart */}
+          {/* Quantity & Add to Cart */}
           <div className="flex items-center gap-10 pt-5">
             <div className="grid grid-cols-3 items-center w-24 border-2 border-black">
               <button
@@ -77,6 +121,7 @@ function SelectProduct() {
 
             <button
               type="button"
+              onClick={handleAddToCart}
               className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base md:px-5 md:py-2.5 md:text-lg font-medium uppercase text-white dark:bg-black"
             >
               <span>ADD TO CART</span>
@@ -84,7 +129,7 @@ function SelectProduct() {
             </button>
           </div>
 
-          {/*description */}
+          {/* description */}
           <div className="w-full border-t-2 border-b-2 border-black mt-20 py-3">
             <h2 className="font-bold text-md sm:text-sm lg:text-lg md:text-md uppercase mb-2">
               Description
@@ -95,7 +140,6 @@ function SelectProduct() {
           </div>
         </div>
       </div>
-
     </div>
   );
 }
