@@ -1,17 +1,45 @@
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import perfume1 from "../images/perfumes/dior/men/Sauvage_EauDeParfum.jpg";
 
 function Cart() {
-  const [quantity, setQuantity] = useState(1);
-  const decreaseQuantity = () => {
-    if (quantity > 1) setQuantity(quantity - 1);
+  const [cartItems, setCartItems] = useState([]);
+
+  // get userId from localStorage (saved during login)
+  const userId = localStorage.getItem("userId");
+
+  // Fetch cart items on page load
+  useEffect(() => {
+    if (!userId) return;
+    axios
+      .get(`http://127.0.0.1:3001/cart/${userId}`)
+      .then((res) => setCartItems(res.data))
+      .catch((err) => console.error("Error fetching cart:", err));
+  }, [userId]);
+
+  // Update quantity
+  const updateQuantity = (cartId, newQuantity) => {
+    if (newQuantity < 1) return; // prevent 0
+    axios
+      .put(`http://127.0.0.1:3001/cart/update/${cartId}`, { quantity: newQuantity })
+      .then((res) => {
+        setCartItems((prev) =>
+          prev.map((item) => (item._id === cartId ? res.data : item))
+        );
+      })
+      .catch((err) => console.error("Error updating quantity:", err));
   };
 
-  const increaseQuantity = () => {
-    setQuantity(quantity + 1);
+  // Remove item
+  const removeItem = (cartId) => {
+    axios
+      .delete(`http://127.0.0.1:3001/cart/remove/${cartId}`)
+      .then(() => {
+        setCartItems((prev) => prev.filter((item) => item._id !== cartId));
+      })
+      .catch((err) => console.error("Error removing item:", err));
   };
 
   return (
@@ -24,7 +52,7 @@ function Cart() {
       </div>
 
       {/*Product Table*/}
-      <div className=" mt-10 relative overflow-x-auto shadow-md">
+      <div className="mt-10 relative overflow-x-auto shadow-md">
         <table className="w-full text-md text-left rtl:text-right text-gray-500 dark:text-gray-400">
           <thead className="text-md text-gray-700 uppercase bg-gray-50 dark:bg-black dark:text-white">
             <tr>
@@ -35,7 +63,7 @@ function Cart() {
                 Product
               </th>
               <th scope="col" className="px-6 py-3">
-                quantity
+                Quantity
               </th>
               <th scope="col" className="px-6 py-3">
                 Price
@@ -47,167 +75,76 @@ function Cart() {
           </thead>
 
           <tbody>
-            <tr className="border-b-2 border-black">
-              <td className="p-4">
-                <img
-                  src={perfume1}
-                  className="border-2 border-black w-12 h-12 md:h-24 md:w-24 max-w-full max-h-full"
-                  alt="perfume1"
-                ></img>
-              </td>
-              <td className="px-6 py-4 font-bold text-black text-md">
-                <div className="text-sm md:text-xl whitespace-nowrap">
-                  Sauvage Eau de Parfum
-                </div>
-                <div className="text-sm md:text-md whitespace-nowrap">
-                  Item No: 276453
-                </div>
-                <div className="text-sm md:text-md whitespace-nowrap">
-                  Size: 50ml
-                </div>
-              </td>
-
-              <td className="px-6 py-4">
-                <div className="grid grid-cols-3 items-center w-24 border-2 border-black text-black font-bold">
-                  <button
-                    className="border-r border-black text-center py-1"
-                    onClick={decreaseQuantity}
-                  >
-                    -
-                  </button>
-                  <div className="text-center">{quantity}</div>
-                  <button
-                    className="border-l border-black text-center py-1"
-                    onClick={increaseQuantity}
-                  >
-                    +
-                  </button>
-                </div>
-              </td>
-              <td className="px-6 py-4 font-bold text-black text-lg">$599</td>
-              <td className="px-6 py-4">
-                <a
-                  href="#"
-                  className="font-bold text-lg text-red-600 dark:text-red-500 hover:underline"
-                >
-                  Remove
-                </a>
-              </td>
-            </tr>
-
-            <tr className="border-b-2 border-black">
-              <td className="p-4">
-                <img
-                  src={perfume1}
-                  className="border-2 border-black w-12 h-12 md:h-24 md:w-24 max-w-full max-h-full"
-                  alt="perfume1"
-                ></img>
-              </td>
-              <td className="px-6 py-4 font-bold text-black text-md">
-                <div className="text-sm md:text-xl whitespace-nowrap">
-                  Sauvage Eau de Parfum
-                </div>
-                <div className="text-sm md:text-md whitespace-nowrap">
-                  Item No: 276453
-                </div>
-                <div className="text-sm md:text-md whitespace-nowrap">
-                  Size: 50ml
-                </div>
-              </td>
-
-              <td className="px-6 py-4">
-                <div className="grid grid-cols-3 items-center w-24 border-2 border-black text-black font-bold">
-                  <button
-                    className="border-r border-black text-center py-1"
-                    onClick={decreaseQuantity}
-                  >
-                    -
-                  </button>
-                  <div className="text-center">{quantity}</div>
-                  <button
-                    className="border-l border-black text-center py-1"
-                    onClick={increaseQuantity}
-                  >
-                    +
-                  </button>
-                </div>
-              </td>
-              <td className="px-6 py-4 font-bold text-black text-lg">$599</td>
-              <td className="px-6 py-4">
-                <a
-                  href="#"
-                  className="font-bold text-lg text-red-600 dark:text-red-500 hover:underline"
-                >
-                  Remove
-                </a>
-              </td>
-            </tr>
-
-            <tr className="border-b-2 border-black">
-              <td className="p-4">
-                <img
-                  src={perfume1}
-                  className="border-2 border-black w-12 h-12 md:h-24 md:w-24 max-w-full max-h-full"
-                  alt="perfume1"
-                ></img>
-              </td>
-              <td className="px-6 py-4 font-bold text-black text-md">
-                <div className="text-sm md:text-xl whitespace-nowrap">
-                  Sauvage Eau de Parfum
-                </div>
-                <div className="text-sm md:text-md whitespace-nowrap">
-                  Item No: 276453
-                </div>
-                <div className="text-sm md:text-md whitespace-nowrap">
-                  Size: 50ml
-                </div>
-              </td>
-
-              <td className="px-6 py-4">
-                <div className="grid grid-cols-3 items-center w-24 border-2 border-black text-black font-bold">
-                  <button
-                    className="border-r border-black text-center py-1"
-                    onClick={decreaseQuantity}
-                  >
-                    -
-                  </button>
-                  <div className="text-center">{quantity}</div>
-                  <button
-                    className="border-l border-black text-center py-1"
-                    onClick={increaseQuantity}
-                  >
-                    +
-                  </button>
-                </div>
-              </td>
-              <td className="px-6 py-4 font-bold text-black text-lg">$599</td>
-              <td className="px-6 py-4">
-                <a
-                  href="#"
-                  className="font-bold text-lg text-red-600 dark:text-red-500 hover:underline"
-                >
-                  Remove
-                </a>
-              </td>
-            </tr>
+            {cartItems.length === 0 ? (
+              <tr>
+                <td colSpan="5" className="text-center py-6 text-black font-bold">
+                  Your cart is empty
+                </td>
+              </tr>
+            ) : (
+              cartItems.map((item) => (
+                <tr key={item._id} className="border-b-2 border-black">
+                  <td className="p-4">
+                    <img
+                      src={item.imageUrl}
+                      className="border-2 border-black w-12 h-12 md:h-24 md:w-24 object-cover"
+                      alt={item.name}
+                    />
+                  </td>
+                  <td className="px-6 py-4 font-bold text-black text-md">
+                    <div className="text-sm md:text-xl whitespace-nowrap">{item.name}</div>
+                    <div className="text-sm md:text-md whitespace-nowrap">Size: {item.size}</div>
+                  </td>
+                  <td className="px-6 py-4">
+                    <div className="grid grid-cols-3 items-center w-24 border-2 border-black text-black font-bold">
+                      <button
+                        className="border-r border-black text-center py-1"
+                        onClick={() => updateQuantity(item._id, item.quantity - 1)}
+                      >
+                        -
+                      </button>
+                      <div className="text-center">{item.quantity}</div>
+                      <button
+                        className="border-l border-black text-center py-1"
+                        onClick={() => updateQuantity(item._id, item.quantity + 1)}
+                      >
+                        +
+                      </button>
+                    </div>
+                  </td>
+                  <td className="px-6 py-4 font-bold text-black text-lg">
+                    ${item.price * item.quantity}
+                  </td>
+                  <td className="px-6 py-4">
+                    <button
+                      onClick={() => removeItem(item._id)}
+                      className="font-bold text-lg text-red-600 hover:underline"
+                    >
+                      Remove
+                    </button>
+                  </td>
+                </tr>
+              ))
+            )}
           </tbody>
         </table>
       </div>
+
       <div className="mt-10 flex justify-end">
         <h1 className="font-bold text-sm text-right">
-          shipping, taxes and discount calculated at checkout.
+          Shipping, taxes and discounts calculated at checkout.
         </h1>
       </div>
 
       <div className="pt-5 sm:pt-16 md:pt-10 flex justify-between items-center w-full">
         {/* Continue Shopping - left */}
-        <button
-          type="button"
+        <Link
+          to="/"
           className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base md:px-5 md:py-2.5 md:text-lg font-medium uppercase text-white dark:bg-black"
         >
           <FaArrowLeft className="text-red-600 text-base sm:text-lg md:text-xl" />
           <span>continue shopping</span>
-        </button>
+        </Link>
 
         {/* Checkout - right */}
         <Link
